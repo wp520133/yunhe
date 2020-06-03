@@ -17,4 +17,4 @@ class PageOutManage(Base):
 
     # 输入报废单名称
 
-    #
+    # 可以
