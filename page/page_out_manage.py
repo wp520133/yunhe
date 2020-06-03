@@ -13,4 +13,8 @@ class PageOutManage(Base):
 
     # 点击我的报废单
 
+    # 点击新增
+
+    # 输入报废单名称
+
     #
