@@ -626,8 +626,63 @@ put_bill_manage_excute_button=By.CSS_SELECTOR,".detail_detailContainer__3um4P > 
 put_bill_manage_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(5)"
 
 
-
-
+"""
+    出库管理→报废单管理→我的报废单新增
+"""
+# 点击出库管理
+out_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)"
+# 点击报废单管理
+scrap_bill_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)"
+# 点击我的报废单
+mind_scrap_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(1)"
+# 点击新增
+public_scrap_bill_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入报废单名称(公有)
+# 点击类型
+public_scrap_bill_type_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择类型
+public_scrap_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 输入申请理由(公有)
+# 点击添加备件清单
+public_scrap_bill_insert_part_bill_click=By.CSS_SELECTOR,".ant-btn-dashed"
+# 点击选择备件型号icon
+public_scrap_bill_insert_part_bill_icon=By.CSS_SELECTOR,".anticon-setting"
+# 点击选择备件型号radio(公有)
+# 点击确定(公有)
+# 输入备件数量(公有)
+# 点击保存
+public_scrap_bill_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击待审批报废单
+wait_approval_scrap_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(2)"
+# 输入报废单名称
+# 点击状态
+# 选择状态
+# 点击查询
+# 点击审批
+# 输入审批意见
+public_scrap_bill_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击通过
+public_scrap_bill_approval_through_button=By.CSS_SELECTOR,"button.ant-btn-primary:nth-child(2)"
+# 点击报废管理
+scrap_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(3)"
+# 点击新增
+# 输入报废单名称
+# 点击类型
+# 选择类型
+# 输入申请理由
+# 点击添加备件清单
+# 点击选择备件型号icon
+# 点击选择备件型号radio
+# 点击确定
+# 输入备件数量
+# 点击保存
+# 输入报废单名称
+# 点击状态
+# 选择状态
+# 点击审批
+# 输入审批意见
+# 点击通过
+scrap_manage_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
 
 
 
