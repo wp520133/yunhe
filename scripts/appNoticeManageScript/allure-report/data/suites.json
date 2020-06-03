@@ -1,0 +1,53 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "scripts.appNoticeManageScript",
+    "children" : [ {
+      "name" : "test_app_notice_manage",
+      "children" : [ {
+        "name" : "TestDeptManage",
+        "children" : [ {
+          "name" : "test_app_notice_manage_insert",
+          "uid" : "80950b0ad4b1b68",
+          "parentUid" : "315d3adc50b058c7c1c7411af12ad2de",
+          "status" : "passed",
+          "time" : {
+            "start" : 1590996307264,
+            "stop" : 1590996310554,
+            "duration" : 3290
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_app_notice_manage_reset",
+          "uid" : "b9b331062058d16",
+          "parentUid" : "315d3adc50b058c7c1c7411af12ad2de",
+          "status" : "passed",
+          "time" : {
+            "start" : 1590996310554,
+            "stop" : 1590996315586,
+            "duration" : 5032
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_app_notice_manage_search",
+          "uid" : "92a5c175ec298602",
+          "parentUid" : "315d3adc50b058c7c1c7411af12ad2de",
+          "status" : "passed",
+          "time" : {
+            "start" : 1590996315593,
+            "stop" : 1590996318381,
+            "duration" : 2788
+          },
+          "flaky" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "315d3adc50b058c7c1c7411af12ad2de"
+      } ],
+      "uid" : "cccf780536c26abdc6df1745b0e9ea71"
+    } ],
+    "uid" : "652706f1ec1d0aa61f37a1d336f729c5"
+  } ]
+}

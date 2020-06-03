@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 03 10:29:49 CST 2020","Wed Jun 03 10:30:03 CST 2020","14908","scripts","test_put_manage","TestDeptManage","","","test_put_bill_manage_put",""
+"passed","Wed Jun 03 10:29:30 CST 2020","Wed Jun 03 10:29:49 CST 2020","18999","scripts","test_put_manage","TestDeptManage","","","test_wait_approval_put_bill_put",""

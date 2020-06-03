@@ -1,0 +1,86 @@
+{
+  "uid" : "f7ccd52dad9a06ca",
+  "name" : "test_wait_approval_put_bill_put",
+  "fullName" : "scripts.test_put_manage.TestDeptManage#test_wait_approval_put_bill_put",
+  "historyId" : "207e7a4f4cba4b521b7a1ced74fc4afe",
+  "time" : {
+    "start" : 1591150596582,
+    "stop" : 1591150615478,
+    "duration" : 18896
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1591150553457,
+      "stop" : 1591150566010,
+      "duration" : 12553
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1591150615481,
+      "stop" : 1591150617858,
+      "duration" : 2377
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "run(order=1)"
+  }, {
+    "name" : "parentSuite",
+    "value" : "scripts"
+  }, {
+    "name" : "suite",
+    "value" : "test_put_manage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDeptManage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-DMQR5NN"
+  }, {
+    "name" : "thread",
+    "value" : "11024-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.test_put_manage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "run(order=1)" ]
+  },
+  "source" : "f7ccd52dad9a06ca.json",
+  "parameterValues" : [ ]
+}

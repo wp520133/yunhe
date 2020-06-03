@@ -1,0 +1,83 @@
+{
+  "uid" : "69af90060b158938",
+  "name" : "test_app_notice_manage_search",
+  "fullName" : "scripts.appNoticeManageScript.test_app_notice_manage.TestDeptManage#test_app_notice_manage_search",
+  "historyId" : "a17451790fc03ba902d7f72810b9ef68",
+  "time" : {
+    "start" : 1590992204405,
+    "stop" : 1590992207148,
+    "duration" : 2743
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup",
+    "time" : {
+      "start" : 1590992183985,
+      "stop" : 1590992196063,
+      "duration" : 12078
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "_UnitTestCase__pytest_class_setup::0",
+    "time" : {
+      "start" : 1590992207149,
+      "stop" : 1590992210445,
+      "duration" : 3296
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "scripts.appNoticeManageScript"
+  }, {
+    "name" : "suite",
+    "value" : "test_app_notice_manage"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestDeptManage"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-DMQR5NN"
+  }, {
+    "name" : "thread",
+    "value" : "4344-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "scripts.appNoticeManageScript.test_app_notice_manage"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "69af90060b158938.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,45 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "scripts.appNoticeManageScript.test_app_notice_manage",
+    "children" : [ {
+      "name" : "test_app_notice_manage_insert",
+      "uid" : "80950b0ad4b1b68",
+      "parentUid" : "3903c694ddf8be68571a2d2ef1d01a3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590996307264,
+        "stop" : 1590996310554,
+        "duration" : 3290
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_app_notice_manage_reset",
+      "uid" : "b9b331062058d16",
+      "parentUid" : "3903c694ddf8be68571a2d2ef1d01a3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590996310554,
+        "stop" : 1590996315586,
+        "duration" : 5032
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_app_notice_manage_search",
+      "uid" : "92a5c175ec298602",
+      "parentUid" : "3903c694ddf8be68571a2d2ef1d01a3a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1590996315593,
+        "stop" : 1590996318381,
+        "duration" : 2788
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "scripts.appNoticeManageScript.test_app_notice_manage"
+  } ]
+}

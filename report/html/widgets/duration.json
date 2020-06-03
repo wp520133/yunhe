@@ -1,0 +1,21 @@
+[ {
+  "uid" : "26905222dd54016b",
+  "name" : "test_put_bill_manage_put",
+  "time" : {
+    "start" : 1591151389077,
+    "stop" : 1591151403985,
+    "duration" : 14908
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "796fe550236cd0d0",
+  "name" : "test_wait_approval_put_bill_put",
+  "time" : {
+    "start" : 1591151370068,
+    "stop" : 1591151389067,
+    "duration" : 18999
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

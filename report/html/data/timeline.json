@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-DMQR5NN",
+    "children" : [ {
+      "name" : "9712-MainThread",
+      "children" : [ {
+        "name" : "test_put_bill_manage_put",
+        "uid" : "26905222dd54016b",
+        "parentUid" : "b58c70425687a3a04e10a84089e22cf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591151389077,
+          "stop" : 1591151403985,
+          "duration" : 14908
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_wait_approval_put_bill_put",
+        "uid" : "796fe550236cd0d0",
+        "parentUid" : "b58c70425687a3a04e10a84089e22cf7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1591151370068,
+          "stop" : 1591151389067,
+          "duration" : 18999
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b58c70425687a3a04e10a84089e22cf7"
+    } ],
+    "uid" : "24d1b0bac4b67cfa52bab785950c4d4b"
+  } ]
+}
