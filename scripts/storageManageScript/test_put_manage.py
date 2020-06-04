@@ -1,5 +1,5 @@
 import unittest
-from page.page_put_manage import PagePutManage
+from page.page_storage_manage.page_put_manage import PagePutManage
 from base.get_driver import GetDriver
 import pytest
 

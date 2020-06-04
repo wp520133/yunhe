@@ -1,5 +1,5 @@
 import unittest
-from page.page_out_manage import PageOutManage
+from page.page_storage_manage.page_out_manage import PageOutManage
 from base.get_driver import GetDriver
 import pytest
 

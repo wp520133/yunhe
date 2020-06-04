@@ -1028,6 +1028,60 @@ curing_plan_manage_insert_finish_click=By.CSS_SELECTOR,"button.ant-btn:nth-child
 
 
 
+"""
+    企业信息列表新增
+"""
+# 点击通讯录管理
+address_manage_click=By.CSS_SELECTOR,"li.ant-menu-submenu:nth-child(6) > div:nth-child(1)"
+# 点击企业信息列表
+firm_infor_manage_click=By.CSS_SELECTOR,"li.ant-menu-submenu:nth-child(6) > ul>li:nth-child(1)"
+
+# 点击新增
+firm_infor_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入企业名称
+public_firm_infor_manage_insert_firm_name_input=By.ID,"name"
+# 点击企业类型
+public_firm_infor_manage_insert_firm_type_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择企业类型
+public_firm_infor_manage_insert_firm_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 输入负责人
+public_firm_infor_manage_insert_charge_name_input=By.ID,"chargeName"
+# 输入联系人
+public_firm_infor_manage_insert_link_name_input=By.ID,"linkName"
+# 输入联系电话
+public_firm_infor_manage_insert_link_phone_input=By.ID,"linkPhone"
+# 输入座机电话
+public_firm_infor_manage_insert_tele_phone_input=By.ID,"telephone"
+# 输入邮箱
+public_firm_infor_manage_insert_email_input=By.ID,"email"
+# 输入地址
+public_firm_infor_manage_insert_site_input=By.ID,"email"
+
+# 点击保存
+public_firm_infor_manage_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+"""
+    企业信息列表查询
+"""
+# 选择厂家类型
+# 输入厂家名称
+# 输入负责人
+# 输入联系人
+# 点击查询
+# 点击编辑
+# 点击查看
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 import unittest
-from page.page_study_data_manage import PageStudyDataManage
+from page.page_file_manage.page_study_data_manage import PageStudyDataManage
 from base.get_driver import GetDriver
 
 
