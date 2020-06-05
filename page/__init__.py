@@ -10,10 +10,11 @@ password = r'(^\d{6,9}$)'
 lindlinephone= r'(^0\d{2,3}-\d{7,8}$)'
 order = r'(^\d{1,2}$)'
 moilePhone = r'(^1[3|5|7|8|]\d{9}$)'
-email=r'(^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$)'
+email=r'([1-9]\d{7,10}@qq\.com)'
 xeger = Xeger()
 publicValue = xeger.xeger(value)
 publicValue2 = xeger.xeger(value)
+publicValue3= xeger.xeger(value)
 publicValue_num_2 = xeger.xeger(value2)
 publicPassword = xeger.xeger(password)
 publicMoilePhone = xeger.xeger(moilePhone)
@@ -25,6 +26,7 @@ public_order_num = publicOrder
 public_order_num_other = publicOrder2
 public_value = publicValue
 public_value2 = publicValue2
+public_value3 = publicValue3
 public_value_num2=publicValue_num_2
 public_password = publicPassword
 public_moile_phone = publicMoilePhone
@@ -1061,7 +1063,7 @@ public_firm_infor_manage_insert_tele_phone_input=By.ID,"telephone"
 # 输入邮箱
 public_firm_infor_manage_insert_email_input=By.ID,"email"
 # 输入地址
-public_firm_infor_manage_insert_site_input=By.ID,"email"
+public_firm_infor_manage_insert_site_input=By.ID,"addr"
 
 # 点击保存
 public_firm_infor_manage_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
@@ -1073,8 +1075,11 @@ public_firm_infor_manage_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-
 # 输入负责人
 # 输入联系人
 # 点击查询
+firm_infor_manage_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 # 点击编辑
+firm_infor_manage_edit_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 点击查看
+firm_infor_manage_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 
 
 
@@ -1097,7 +1102,7 @@ public_firm_infor_manage_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-
 
 
 """
-    我的学习资料新增、查看、重置、编辑→学习资料审批查询、审批、查看、重置
+    我的学习资料管理
 """
 """
     我的学习资料新增
@@ -1108,77 +1113,82 @@ file_manage_click=By.CSS_SELECTOR,'li.ant-menu-submenu:nth-child(7) > div:nth-ch
 study_data_manage_click=By.CSS_SELECTOR,'#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:first-child>div'
 # 点击我的学习资料
 mine_study_data_click=By.CSS_SELECTOR,'#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:first-child>ul>li:nth-child(3)'
-# 点击新增(公有)
+# 点击新增
+mine_study_data_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
 # 输入名称
-mine_study_data_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+public_mine_study_data_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
 # 输入描述
-mine_study_data_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
+public_mine_study_data_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
 # 点击上传按钮
-mine_study_data_upload_file_button=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
+public_mine_study_data_upload_file_button=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
 # 点击保存
-mine_study_data_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+public_mine_study_data_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
 
 """
     我的学习资料查询
 """
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
-
+# 输入名称
+public_mine_study_data_search_name_input=By.ID,"name"
+# 输入描述
+public_mine_study_data_search_desc_input=By.ID,"desc"
+# 点击状态
+public_mine_study_data_search_type_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择状态
+public_mine_study_data_search_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击查询
+public_public_mine_study_data_search_button=By.CSS_SELECTOR,".ant-form-inline > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 """
     我的学习资料重置
 """
-# 点击重置(公有)
-
+# 点击重置
+public_mine_study_data_reset_button=By.CSS_SELECTOR,".ant-form-inline > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
 """
     我的学习资料编辑
 """
-# 点击编辑(公有)
-
-# 点击查看(公有)
-
+# 点击编辑
+mine_study_data_edit_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
+# 点击查看
+mine_study_data_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 """
     学习资料审批查询
 """
 # 点击学习资料审批
 study_data_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:first-child>ul>li:nth-child(4)"
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
-# 点击审批(公有)
-
+# 输入名称
+# 输入描述
+# 点击状态
+# 选择状态
+# 点击查询
+# 点击审批
+study_data_approval_excute_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 """
     学习资料重置
 """
-# 点击重置(公有)
+# 点击重置
 
 """
-    学习资料查看
+    学习资料审批查看
 """
-# 点击查看(公有)
+# 点击查看审批查看
 
 """
     学习资料列表查询
 """
 # 点击学习资料列表
 study_data_list_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:first-child>ul>li:nth-child(1)"
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击查询(公有)
+# 输入名称
+# 输入描述
+# 点击查询
 """
     学习资料重置
 """
-# 点击重置(公有)
+# 点击重置
 
 """
-    学习资料查看
+    学习资料列表查看
 """
-# 点击查看(公有)
-
+# 点击学习资料列表查看
+study_data_list_watch_click=By.CSS_SELECTOR,".ant-btn-link"
 """
     学习资料管理(子)新增
 """
@@ -1187,34 +1197,32 @@ study_data_manage_son_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-chi
 # 点击新增
 study_data_manage_son_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
 # 输入名称
-study_data_manage_son_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
 # 输入描述
-study_data_manage_son_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
 # 点击上传附件按钮
-study_data_manage_son_updata_click=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
 # 点击保存
-study_data_manage_son_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
 """
     学习资料管理(子)查询
 """
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
+# 输入名称
+# 输入描述
+# 点击状态
+# 选择状态
+# 点击查询
 """
     学习资料管理(子)编辑
 """
-# 点击编辑(公有)
+# 点击编辑
+study_data_manage_son_edit_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(4)"
 """
     学习资料管理(子)审批
 """
-# 点击审批(公有)
-
+# 点击审批
+study_data_manage_son_approval_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
 """
     学习资料管理(子)查看
 """
-# 点击查看(公有)
+# 点击查看
+study_data_manage_son_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 """
     学习资料管理(子)重置
 """

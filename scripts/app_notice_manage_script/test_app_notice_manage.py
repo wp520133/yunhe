@@ -22,16 +22,19 @@ class TestDeptManage(unittest.TestCase):
         GetDriver().quit_driver()
 
     # 测试新增
+    @pytest.mark.run(order=1)
     @allure.step(title="App公告管理新增")
     def test_app_notice_manage_insert(self):
         self.panm.app_notice_manage_insert(page.public_value, page.public_value)
 
     # 测试查询
+    @pytest.mark.run(order=2)
     @allure.step(title="App公告管理查询")
     def test_app_notice_manage_search(self):
         self.panm.app_notice_manage_search()
 
     # 测试重置
+    @pytest.mark.run(order=3)
     @allure.step(title="App公告管理重置")
     def test_app_notice_manage_reset(self):
         self.panm.app_notice_manage_reset()
