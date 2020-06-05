@@ -33,11 +33,13 @@ class PageFirmInfoManage(Base):
         self.base_input(page.public_firm_infor_manage_insert_link_name_input,page.public_value_num2)
     # 输入联系电话
     def page_public_firm_infor_manage_insert_link_phone_input(self):
-
+        self.base_input(page.public_firm_infor_manage_insert_link_phone_input,page.public_moile_phone)
     # 输入座机电话
-
+    def page_public_firm_infor_manage_insert_tele_phone_input(self):
+        self.base_input(page.public_firm_infor_manage_insert_tele_phone_input,page.public_land_line_phone)
     # 输入邮箱
-
+    def page_public_firm_infor_manage_insert_email_input(self):
+        self.base_input(page.public_firm_infor_manage_insert_email_input,page.public_email)
     # 输入地址
 
     # 点击保存

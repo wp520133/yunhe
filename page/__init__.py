@@ -7,14 +7,18 @@ url = "http://192.168.102.50:6426/"
 value = r'([a-zA-Z]{3,6})'
 value2 = r'([a-zA-Z]{1,2})'
 password = r'(^\d{6,9}$)'
+lindlinephone= r'(^0\d{2,3}-\d{7,8}$)'
 order = r'(^\d{1,2}$)'
 moilePhone = r'(^1[3|5|7|8|]\d{9}$)'
+email=r'(^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$)'
 xeger = Xeger()
 publicValue = xeger.xeger(value)
 publicValue2 = xeger.xeger(value)
 publicValue_num_2 = xeger.xeger(value2)
 publicPassword = xeger.xeger(password)
 publicMoilePhone = xeger.xeger(moilePhone)
+publicLindLiePhone=xeger.xeger(lindlinephone)
+publicEmail=xeger.xeger(email)
 publicOrder = xeger.xeger(order)
 publicOrder2 = xeger.xeger(order)
 public_order_num = publicOrder
@@ -24,6 +28,8 @@ public_value2 = publicValue2
 public_value_num2=publicValue_num_2
 public_password = publicPassword
 public_moile_phone = publicMoilePhone
+public_land_line_phone=publicLindLiePhone
+public_email=publicEmail
 
 # 公共的用户名输入
 public_username_input = By.ID, "username"
