@@ -19,13 +19,9 @@ class TestDeptManage(unittest.TestCase):
 
     # 测试我的报废单的新增、到查询审批
     @pytest.mark.run(order=1)
-    def test_wait_approval_scrap_bill_approval(self):
-        self.pom.wait_approval_scrap_bill_approval()
+    def test_wait_excute_scrap_bill_out(self):
+        self.pom.wait_excute_scrap_bill_out()
 
-    # 测试报废管理的新增、到查询审批
-    @pytest.mark.run(order=2)
-    def test_scrap_manage_approval(self):
-        self.pom.scrap_manage_approval()
 
 if __name__ == '__main__':
     pytest.main()

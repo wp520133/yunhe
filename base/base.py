@@ -28,6 +28,9 @@ class Base:
         el = self.base_find_element(loc)
         el.clear()
         el.send_keys(value)
+    # 获取文本
+    def base_get_html(self,loc):
+        return self.base_find_element(loc).get_attribute("textContent")
 
     # 获取文本方法
     def base_get_text(self, loc):

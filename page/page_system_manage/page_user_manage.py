@@ -50,7 +50,7 @@ class TestPageUserManage(Base):
 
     # 点击新增
     def page_user_manage_insert(self):
-        self.base_click(page.public_insert_button)
+        self.base_click(page.user_manage_insert_click)
 
     # 输入用户名
     def page_user_manage_insert_username(self):

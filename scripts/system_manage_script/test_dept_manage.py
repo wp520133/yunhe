@@ -20,6 +20,7 @@ class TestDeptManage(unittest.TestCase):
     def test_dept_manage_insert(self):
         self.pd.dept_manage_insert()
 
+
     # 测试部门管理编辑
     def test_dept_manage_edit(self):
         self.pd.dept_manage_edit()

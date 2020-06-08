@@ -79,7 +79,7 @@ class PageSituationReflectsLog(Base):
 
     # 查询
 
-    def breakdown_service_log_search(self):
+    def situation_reflects_log_search(self):
         self.page_curing_history_manage_click()
         self.page_situation_reflects_service_log_click()
         self.page_situation_reflects_system_class_click()
@@ -95,13 +95,13 @@ class PageSituationReflectsLog(Base):
         time.sleep(2)
 
     # 重置
-    def breakdown_service_log_reset(self):
-        self.breakdown_service_log_search()
+    def situation_reflects_log_reset(self):
+        self.situation_reflects_log_search()
         self.page_situation_reflects_log_reset_button()
         time.sleep(2)
 
     # 查看
-    def breakdown_service_log_watch(self):
+    def situation_reflects_log_watch(self):
         self.page_situation_reflects_log_watch_button()
         self.page_situation_reflects_log_watch_exct_icon()
         time.sleep(2)

@@ -44,8 +44,8 @@ class PageRoleManage(Base):
     def page_role_manage_click_watch(self):
         self.base_click(page.public_watch_four_line_click)
 
-    # 刷新
-    def page_role_manage_refresh_watch(self):
+    # 撤销(x)
+    def page_role_manage_cross(self):
         self.base_refresh()
 
     """

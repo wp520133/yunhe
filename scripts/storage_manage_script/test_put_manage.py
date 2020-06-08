@@ -27,10 +27,6 @@ class TestDeptManage(unittest.TestCase):
     def test_put_bill_manage_put(self):
         self.ppm.put_bill_manage_put()
 
-    # 测试入库单管理查看
-    @pytest.mark.run(order=3)
-    def test_put_bill_manage_watch(self):
-        self.ppm.put_bill_manage_watch()
 
 
 if __name__ == '__main__':

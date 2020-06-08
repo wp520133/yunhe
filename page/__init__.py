@@ -6,6 +6,8 @@ url = "http://192.168.102.50:6426/"
 
 value = r'([a-zA-Z]{3,6})'
 value2 = r'([a-zA-Z]{1,2})'
+value_51=r'([a-zA-Z]{51,53})'
+value_256=r'([a-zA-Z]{256,257})'
 password = r'(^\d{6,9}$)'
 lindlinephone= r'(^0\d{2,3}-\d{7,8}$)'
 order = r'(^\d{1,2}$)'
@@ -15,6 +17,8 @@ xeger = Xeger()
 publicValue = xeger.xeger(value)
 publicValue2 = xeger.xeger(value)
 publicValue3= xeger.xeger(value)
+publicValue_51=xeger.xeger(value_51)
+publicValue_256=xeger.xeger(value_256)
 publicValue_num_2 = xeger.xeger(value2)
 publicPassword = xeger.xeger(password)
 publicMoilePhone = xeger.xeger(moilePhone)
@@ -27,6 +31,8 @@ public_order_num_other = publicOrder2
 public_value = publicValue
 public_value2 = publicValue2
 public_value3 = publicValue3
+public_value_51=publicValue_51
+public_value_256=publicValue_256
 public_value_num2=publicValue_num_2
 public_password = publicPassword
 public_moile_phone = publicMoilePhone
@@ -159,27 +165,72 @@ public_apprival_device_input=By.CSS_SELECTOR,"#auditOpinion"
 # 点击通过
 public_apprival_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
 
-
-# 系统登录
+########################################################################################################################
+"""
+    系统登录
+"""
+# 输入系统用户名
+system_username_input=By.ID, "username"
+# 输入系统密码
+system_password_input=By.ID, "password"
+# 点击系统登录按钮
 system_login_button = By.CSS_SELECTOR, ".ant-btn"
+########################################################################################################################
 """
-    系统管理的相关变量
+    系统管理
 """
+# 点击系统管理
 system_manage_click=By.CSS_SELECTOR,"#root ul:first-child>li>ul>li:first-child>div"
-# 系统管理→用户管理→查询
-user_manage_status_click = By.CSS_SELECTOR, ".ant-select-selection"
-user_manage_status_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(2)"
-user_manage_search_button = By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
-
-# 系统管理→用户管理→重置
-
-# 系统管理→用户管理→禁用
-user_manage_ban_button = By.CSS_SELECTOR, "button.ant-btn:nth-child(3)"
-user_manage_ban_sure_button = By.CSS_SELECTOR, ".ant-modal-confirm-btns > button:nth-child(2)"
-# 系统管理→用户管理新增
+########################################################################################################################
+"""
+    用户管理
+"""
+"""
+    用户管理新增
+"""
+# 点击新增按钮
+user_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入用户名
+user_manage_insert_username_input=By.ID, "username"
+# 输入新密码
+user_manage_insert_password_input=By.ID, "password"
+# 输入确认密码
+user_manage_insert_sure_password_input=By.ID, "confirm"
+# 点击角色
 user_manage_insert_role_click = By.CSS_SELECTOR, ".ant-select-selection__placeholder"
+# 选择角色
 user_manage_insert_role_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击关联人员icon
 user_manage_insert_rv_icon = By.CSS_SELECTOR, ".anticon-user"
+# 选择关联人员radio
+user_manage_insert_rv_radio=By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+user_manage_insert_rv_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+"""
+    用户管理查询
+"""
+# 输入用户名
+user_manage_search_username_input=By.ID, "username"
+# 点击状态
+user_manage_status_click = By.CSS_SELECTOR, ".ant-select-selection"
+# 选择状态
+user_manage_status_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(2)"
+# 点击查询
+user_manage_search_button = By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+"""
+    用户管理重置
+"""
+# 点击重置
+user_manage_reset_button=By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+"""
+    用户管理禁用
+"""
+# 系统管理→用户管理→禁用
+# 点击禁用
+user_manage_ban_button = By.CSS_SELECTOR, "button.ant-btn:nth-child(3)"
+# 点击确定禁用
+user_manage_ban_sure_button = By.CSS_SELECTOR, ".ant-modal-confirm-btns > button:nth-child(2)"
+
 # 系统管理→用户管理编辑(公有)
 
 # 系统管理→角色管理新增(公有)
@@ -540,9 +591,12 @@ repair_type_manage_ttm_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
 
 
 
-
+########################################################################################################################
 """
-    我的入库单新增
+    仓储管理
+"""
+"""
+    我的入库单新增→待审批入库单审批→待执行入库单入库
 """
 # 点击仓储管理
 storage_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>div"
@@ -551,43 +605,56 @@ put_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li
 # 点击我的入库单
 mine_put_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li>ul>li:nth-child(1)"
 # 点击新增
+public_put_bill_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
 # 输入入库单名称
+public_put_bill_name_input=By.ID,"name"
 # 点击类型
-mine_put_bill_type_click=By.CSS_SELECTOR,".ant-select-selection__rendered"
+public_put_bill_type_click=By.CSS_SELECTOR,".ant-select-selection__rendered"
 # 选择类型
-mine_put_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+public_put_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 输入申请理由
+public_put_bill_apply_reason_input=By.ID,"applyReason"
 # 点击添加备件清单
-mine_put_bill_insert_part_bill=By.CSS_SELECTOR,".ant-btn-dashed"
+public_put_bill_insert_part_bill=By.CSS_SELECTOR,".ant-btn-dashed"
 # 点击选择备件型号icon
-mine_put_bill_insert_part_bill_icon=By.CSS_SELECTOR,".anticon-setting"
+public_put_bill_insert_part_bill_icon=By.CSS_SELECTOR,".anticon-setting"
 # 选择备件型号radio
+public_put_bill_insert_art_bill_radio=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
 # 点击确定
-mine_put_bill_insert_part_bill_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+public_put_bill_insert_part_bill_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
 # 输入备件数量
+public_put_bill_insert_part_bill_num_input=By.ID,"spareNum[0]"
 # 输入采购单价
+public_put_bill_insert_part_bill_price_input=By.ID,"purchasingPrice[0]"
 # 输入采购单位
+public_put_bill_insert_part_bill_unit_input=By.ID,"purchasingPriceUnit[0]"
 # 点击保存
+public_put_bill_insert_part_bill_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
 # 点击待审批入库单
-wait_approval_put_bill_click=By.CSS_SELECTOR,"li.ant-menu-item:nth-child(2) > span:nth-child(2)"
-# 输入待审批入库单-名称
-# 输入待审批入库单-点击状态
-wait_approval_put_bill_type_click=By.CSS_SELECTOR,".ant-select-selection"
-# 输入待审批入库单-选择状态
-wait_approval_put_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+wait_approval_put_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:first-child>ul>li:nth-child(2)"
+# 输入入库单名称
+# 点击状态
+public_put_bill_status_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择状态
+public_put_bill_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 点击查询
+public_put_bill_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 # 点击审批
+public_put_bill_approval_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
+# 输入审批意见
+public_put_bill_apprival_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击审批通过
+public_put_bill_apprival_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
 # 点击待执行入库单
-wait_excute_put_bill_click=By.CSS_SELECTOR,"li.ant-menu-item:nth-child(3) > span:nth-child(2)"
-# 输入待执行入库单-名称
-# 点击待执行入库单-状态
-wait_excute_put_bill_type_click=By.CSS_SELECTOR,".ant-select-selection"
-# 选择待执行入库单-状态
-wait_excute_put_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+wait_excute_put_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:first-child>ul>li:nth-child(3)"
+# 输入入库单-名称
+# 点击状态状态
+# 选择状态
 # 点击查询
 # 点击入库
+public_put_bill_put_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 # 点击执行
-wait_excute_put_bill_excute_button=By.CSS_SELECTOR,".detail_detailContainer__3um4P > div:nth-child(7) > button:nth-child(2)"
+public_wait_excute_put_bill_excute_button=By.CSS_SELECTOR,".detail_detailContainer__3um4P > div:nth-child(7) > button:nth-child(2)"
 """
     入库单管理新增、查询、审批、入库
 """
@@ -596,46 +663,41 @@ put_bill_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>
 # 点击新增
 # 输入入库单名称
 # 点击类型
-put_bill_manage_type_click=By.CSS_SELECTOR,".ant-select-selection__rendered"
 # 选择类型
-put_bill_manage_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 输入申请理由
 # 点击添加备件清单
-put_bill_manage_part_unit_click=By.CSS_SELECTOR,".ant-btn-dashed"
 # 点击添加备件清单icon
-put_bill_manage_part_unit_icon=By.CSS_SELECTOR,".anticon-setting"
 # 选择添加备件清单radio
 # 点击确定
 # 输入备件数量
 # 输入采购单价
 # 输入采购单价单位
 # 点击保存
-put_bill_manage_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
 
 """
     入库管理查询
 """
 # 输入入库单名称
 # 点击状态
-put_bill_manage_part_unit_type_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择状态-待审批
 put_bill_manage_part_unit_type_select_approval=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 选择状态-待入库
 put_bill_manage_part_unit_type_select_put=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
-# 选择状态-入库完成
-put_bill_manage_part_unit_type_select_finish_put=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(4)"
 # 点击查询
 # 点击审批
-
+put_bill_manage_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 点击入库
+put_bill_manage_put_click=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
 # 点击执行
 put_bill_manage_excute_button=By.CSS_SELECTOR,".detail_detailContainer__3um4P > div:nth-child(7) > button:nth-child(2)"
 # 点击查看
 put_bill_manage_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(5)"
 
-
 """
-    出库管理→报废单管理→我的报废单新增
+    出库管理
+"""
+"""
+    我的报废单新增→待审批报废单审批→待执行出库单
 """
 # 点击出库管理
 out_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)"
@@ -645,52 +707,62 @@ scrap_bill_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2
 mind_scrap_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(1)"
 # 点击新增
 public_scrap_bill_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
-# 输入报废单名称(公有)
+# 输入报废单名称
+public_scrap_bill_name_input=By.ID,"name"
 # 点击类型
 public_scrap_bill_type_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择类型
 public_scrap_bill_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
-# 输入申请理由(公有)
+# 输入申请理由
+public_scrap_bill_excute_input=By.ID,"applyReason"
 # 点击添加备件清单
 public_scrap_bill_insert_part_bill_click=By.CSS_SELECTOR,".ant-btn-dashed"
 # 点击选择备件型号icon
 public_scrap_bill_insert_part_bill_icon=By.CSS_SELECTOR,".anticon-setting"
-# 点击选择备件型号radio(公有)
-# 点击确定(公有)
-# 输入备件数量(公有)
+# 点击选择备件型号radio
+public_scrap_bill_insert_part_bill_radio=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+public_scrap_bill_insert_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 输入备件数量
+public_scrap_bill_insert_repair_num_input=By.ID,"spareNum[0]"
 # 点击保存
 public_scrap_bill_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+"""
+    新增的报废单进行审批
+"""
 # 点击待审批报废单
 wait_approval_scrap_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(2)"
 # 输入报废单名称
 # 点击状态
+public_scrap_bill_status_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择状态
+public_scrap_bill_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 点击查询
+public_scrap_bill_search_button=By.CSS_SELECTOR,".ant-btn-primary"
 # 点击审批
+public_scrap_bill_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 # 输入审批意见
 public_scrap_bill_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
 # 点击通过
 public_scrap_bill_approval_through_button=By.CSS_SELECTOR,"button.ant-btn-primary:nth-child(2)"
-# 点击报废管理
-scrap_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(1)>ul>li:nth-child(3)"
-# 点击新增
-# 输入报废单名称
-# 点击类型
-# 选择类型
-# 输入申请理由
-# 点击添加备件清单
-# 点击选择备件型号icon
-# 点击选择备件型号radio
-# 点击确定
-# 输入备件数量
-# 点击保存
-# 输入报废单名称
+"""
+    对审批过的报废单进行出库
+"""
+# 点击待执行的出库单
+wait_excute_out_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(4)"
+# 输入出库单名称
 # 点击状态
 # 选择状态
-# 点击审批
-# 输入审批意见
-# 点击通过
-scrap_manage_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
+# 点击类型
+wait_excute_out_bill_type_click=By.CSS_SELECTOR,"#type > div:nth-child(1)"
+# 选择类型(报废出库)
+wait_excute_out_bill_select_nth2=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
+# 点击查询
+# 点击出库
+wait_excute_out_bill_out_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
+# 点击执行
+wait_excute_out_bill_out_excute_click=By.CSS_SELECTOR,"button.ant-btn-primary:nth-child(2)"
+
 
 
 
@@ -1541,9 +1613,9 @@ record_manage_son_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-ch
 
 
 
-
+################################################################################################################################
 """
-    点击app公告管理
+    app公告管理
 """
 # 点击app公告管理
 
@@ -1554,14 +1626,20 @@ app_notice_manage_click=By.CSS_SELECTOR,"li.ant-menu-item:nth-child(8) > span:nt
 # 点击新增(公有)
 app_notice_manage_insert_click=By.CSS_SELECTOR,".style_btnGroup__1B5uf > button:nth-child(1)"
 # 输入公告标题(公有)
-
+# 获取公告标题提示语
+app_notice_manage_insert_title_hint=By.CSS_SELECTOR,"div.ant-form-item-with-help:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
 # 输入公告内容(公有)
-
+# 获取公告内容提示语
+app_notice_manage_insert_content_hint=By.CSS_SELECTOR,"div.ant-form-item-with-help:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
 # 点击公告类型
 app_notice_manage_insert_type_click=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
 # 选择公告类型
 app_notice_manage_insert_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 公告类型提示语
+app_notice_manage_insert_type_hint=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
 # 点击确定(公有)
+# 撤销(x)
+app_notice_manage_insert_cross=By.CSS_SELECTOR,"body>div:last-child>div>div>div>div:nth-child(2)>button>span"
 """
     app公告管理查询
 """
@@ -1576,7 +1654,7 @@ app_notice_manage_search_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-men
 # 点击重置(公有)
 
 
-
+################################################################################################################################
 
 
 
