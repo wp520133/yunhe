@@ -1106,6 +1106,98 @@ parts_replacement_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calenda
 parts_replacement_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
 # 点击重置
 parts_replacement_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+
+
+"""
+    故障维修日志
+"""
+# 点击故障维修日志
+breakdown_service_log_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(5)>ul>li:nth-child(3)"
+# 点击系统类别
+breakdown_service_log_system_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择系统类别
+breakdown_service_log_system_class_select=By.CSS_SELECTOR,"li.ant-select-tree-treenode-switcher-close:nth-child(1) > span:nth-child(2) > span:nth-child(1)"
+# 点击部件类别
+breakdown_service_log_component_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件类别
+breakdown_service_log_component_class_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击部件型号
+breakdown_service_log_component_type_click=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件型号
+breakdown_service_log_component_type_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击选择时间段
+breakdown_service_log_time_quantum_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前半段时间
+breakdown_service_log_time_quantum_select_before=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后半段时间
+breakdown_service_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击查询
+breakdown_service_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+# 点击重置
+breakdown_service_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击查看
+breakdown_service_log_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > button:nth-child(1)"
+# 点击退出icon(x)
+breakdown_service_log_watch_exct_icon=By.CSS_SELECTOR,"body>div:last-child>div>div>div>div:nth-child(2)>button>span"
+
+
+"""
+    情况反映日志
+"""
+# 点击情况反映日志
+situation_reflects_log_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(5)>ul>li:nth-child(4)"
+# 点击系统类别
+situation_reflects_log_system_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择系统类别
+situation_reflects_log_system_class_select=By.CSS_SELECTOR,"li.ant-select-tree-treenode-switcher-close:nth-child(1) > span:nth-child(2) > span:nth-child(1)"
+# 点击部件类别
+situation_reflects_log_component_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件类别
+situation_reflects_log_component_class_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击部件型号
+situation_reflects_log_component_type_click=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件型号
+situation_reflects_log_component_type_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击选择时间段
+situation_reflects_log_time_quantum_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前半段时间
+situation_reflects_log_time_quantum_select_before=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后半段时间
+situation_reflects_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击查询
+situation_reflects_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+# 点击重置
+situation_reflects_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击查看
+situation_reflects_log_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(6) > button:nth-child(1)"
+# 点击退出icon(x)
+situation_reflects_log_watch_exct_icon=By.CSS_SELECTOR,"body>div:last-child>div>div>div>div:nth-child(2)>button>span"
+
+"""
+    派工与任务日志
+"""
+# 点击派工与任务日志
+dispatching_task_log_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(5)>ul>li:nth-child(5)"
+# 输入创建人
+dispatching_task_log_search_create_by_input=By.ID,"createBy"
+# 点击选择时间段
+dispatching_task_log_time_quantum_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前半段时间
+dispatching_task_log_time_quantum_select_before=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后半段时间
+dispatching_task_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击查询
+dispatching_task_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+# 点击重置
+dispatching_task_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击查看
+dispatching_task_log_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(7) > button:nth-child(1)"
+# 点击工作内容
+dispatching_task_log_work_content_click=By.CSS_SELECTOR,"div.ant-tabs-tab:nth-child(2)"
+# 点击操作记录
+dispatching_task_log_operating_record_click=By.CSS_SELECTOR,"div.ant-tabs-tab:nth-child(3)"
+# 点击返回
+dispatching_task_log_return_click=By.CSS_SELECTOR,".style_title__YBhhm > button:nth-child(1)"
 ######################################################################################################################################
 
 
