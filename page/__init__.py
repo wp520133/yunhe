@@ -1036,6 +1036,80 @@ curing_plan_manage_insert_finish_click=By.CSS_SELECTOR,"button.ant-btn:nth-child
 
 
 
+######################################################################################################################################
+"""
+    养护历史管理
+"""
+"""
+    设备养护日志
+"""
+
+# 点击养护历史管理
+curing_history_manage_click=By.CSS_SELECTOR,"li.ant-menu-submenu:nth-child(5) > div:nth-child(1) > span:nth-child(1) > span:nth-child(2)"
+# 点击设备养护日志
+facility_curing_log_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(5)>ul>li:nth-child(1)"
+# 点击系统类别
+facility_curing_log_system_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择系统类别
+facility_curing_log_system_class_select=By.CSS_SELECTOR,"li.ant-select-tree-treenode-switcher-close:nth-child(1) > span:nth-child(2) > span:nth-child(1)"
+# 点击部件类别
+facility_curing_log_component_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件类别
+facility_curing_log_component_class_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击部件型号
+facility_curing_log_component_type_click=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件型号
+facility_curing_log_component_type_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击选择时间段
+facility_curing_log_time_quantum_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前半段时间
+facility_curing_log_time_quantum_select_before=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后半段时间
+facility_curing_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击评估结果
+facility_curing_log_assessment_resoult_click=By.CSS_SELECTOR,"div.ant-select-selection"
+# 选择评估结果
+facility_curing_log_assessment_resoult_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击查询
+facility_curing_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+# 点击重置
+facility_curing_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击养护记录
+curing_record_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > button:nth-child(1)"
+# 点击返回icon
+facility_curing_log_return_icon=By.CSS_SELECTOR,".style_title__1T4mf > button:nth-child(1)"
+
+"""
+    配件更换日志
+"""
+# 点击设备养护日志
+parts_replacement_log_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(5)>ul>li:nth-child(2)"
+# 点击系统类别
+parts_replacement_log_system_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择系统类别
+parts_replacement_log_system_class_select=By.CSS_SELECTOR,"li.ant-select-tree-treenode-switcher-close:nth-child(1) > span:nth-child(2) > span:nth-child(1)"
+# 点击部件类别
+parts_replacement_log_component_class_click=By.CSS_SELECTOR,"div.ant-row:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件类别
+parts_replacement_log_component_class_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击部件型号
+parts_replacement_log_component_type_click=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1)"
+# 选择部件型号
+parts_replacement_log_component_type_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child>span:nth-child(2)"
+# 点击选择时间段
+parts_replacement_log_time_quantum_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前半段时间
+parts_replacement_log_time_quantum_select_before=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后半段时间
+parts_replacement_log_time_quantum_select_after=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击查询
+parts_replacement_log_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+# 点击重置
+parts_replacement_log_reset_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+######################################################################################################################################
+
+
+
 """
     企业信息列表新增
 """
