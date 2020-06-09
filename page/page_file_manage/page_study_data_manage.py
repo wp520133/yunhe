@@ -31,6 +31,9 @@ class PageStudyDataManage(Base):
     def page_mine_study_data_insert_name_input(self):
         self.base_input(page.public_mine_study_data_insert_name_input, page.public_value)
 
+    # 学习资料管理新增输入名称
+    def page_mine_study_data_insert_name2_input(self):
+        self.base_input(page.public_mine_study_data_insert_name_input, page.public_value2)
     # 输入描述
     def page_mine_study_data_insert_desc_input(self):
         self.base_input(page.public_mine_study_data_insert_desc_input, page.public_value)
@@ -50,6 +53,10 @@ class PageStudyDataManage(Base):
     # 输入名称
     def page_mine_study_data_search_name_input(self):
         self.base_input(page.public_mine_study_data_search_name_input, page.public_value)
+
+    # 学习资料管理查询输入名称
+    def page_mine_study_data_search_name2_input(self):
+        self.base_input(page.public_mine_study_data_search_name_input, page.public_value2)
 
     # 输入描述
     def page_mine_study_data_search_desc_input(self):
@@ -266,6 +273,35 @@ class PageStudyDataManage(Base):
         self.mine_study_data_insert()
         self.study_data_approval_search()
         self.page_study_data_approval_excute_click()
+        self.page_study_data_approval_excute_device_input()
+        self.page_study_data_approval_excute_though_button()
+        time.sleep(2)
+
+    # 学习资料管理(子)新增
+    def study_data_manage_son_insert(self):
+        self.page_study_data_manage_son_click()
+        self.page_mine_study_data_insert_click()
+        self.page_mine_study_data_insert_name2_input()
+        self.page_mine_study_data_insert_desc_input()
+        self.mine_study_data_upload_file_button()
+        self.base_upload()
+        self.mine_study_data_save_button()
+        time.sleep(2)
+
+    # 学习资料管理(子)查询
+    def study_data_manage_son_search(self):
+        self.page_mine_study_data_search_name2_input()
+        self.page_mine_study_data_search_desc_input()
+        self.page_mine_study_data_search_status_click()
+        self.page_mine_study_data_search_status_select()
+        self.page_mine_study_data_search_button()
+        time.sleep(2)
+
+    # 学习资料管理(子)审批
+    def study_data_manage_son_approval(self):
+        self.study_data_manage_son_insert()
+        self.study_data_manage_son_search()
+        self.page_study_data_manage_son_approval_button()
         self.page_study_data_approval_excute_device_input()
         self.page_study_data_approval_excute_though_button()
         time.sleep(2)

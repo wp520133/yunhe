@@ -1478,6 +1478,7 @@ firm_infor_manage_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapp
 firm_infor_manage_edit_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 点击查看
 firm_infor_manage_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
+
 ########################################################################################################################
 
 """
@@ -1612,6 +1613,85 @@ study_data_manage_son_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-chil
 # 点击重置
 
 
+
+"""
+   我的档案新增
+"""
+# 点击档案管理
+data_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>div"
+# 点击我的档案
+mind_data_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(3)"
+# 点击新增
+mind_data_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入名称
+mind_data_manage_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+# 输入描述
+mind_data_manage_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
+# 点击附件
+mind_data_manage_insert_upload_file_click=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
+# 点击保存
+mind_data_manage_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+"""
+    档案审批查询
+"""
+# 点击档案审批
+
+# 输入名称
+
+# 输入描述
+
+# 点击状态
+
+# 选择状态
+
+# 点击查询
+
+"""
+    档案审批审批
+"""
+# 点击审批
+
+# 输入审批意见
+
+# 点击通过
+
+
+"""
+    档案管理(子)新增
+"""
+# 点击档案管理(子)新增
+
+# 点击新增
+
+# 输入名称
+
+# 输入描述
+
+# 点击附件
+
+# 点击保存
+
+"""
+    档案管理(子)查询
+"""
+# 输入名称
+
+# 输入描述
+
+# 点击状态
+
+# 选择状态
+
+# 点击查询
+
+"""
+    档案管理(子)审批
+"""
+# 点击审批
+
+# 输入审批意见
+
+# 点击通过
 
 
 

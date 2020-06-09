@@ -25,6 +25,8 @@ class TestDeptManage(unittest.TestCase):
     def test_study_data_approval(self):
         self.psdm.study_data_approval()
 
+    def test_study_data_manage_son_approval(self):
+        self.psdm.study_data_manage_son_approval()
 
 if __name__ == '__main__':
     pytest.main()
