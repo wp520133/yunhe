@@ -1073,3 +1073,42 @@ JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILUR
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
 libpng warning: iCCP: cHRM chunk does not match sRGB
+1591681879173	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\17327\\AppData\\Local\\Temp\\rust_mozprofileoxEta1"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591681882996	Marionette	INFO	Listening on port 54918
+1591681883289	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILURE: Should pass a non-null uri
+1591681920953	Marionette	INFO	Stopped listening on port 54918
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+libpng warning: iCCP: cHRM chunk does not match sRGB
+1591681961319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\17327\\AppData\\Local\\Temp\\rust_mozprofileiSXB0O"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591681965198	Marionette	INFO	Listening on port 55007
+1591681965435	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILURE: Should pass a non-null uri
+1591681994924	Marionette	INFO	Stopped listening on port 55007
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+libpng warning: iCCP: cHRM chunk does not match sRGB
+1591682070734	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\17327\\AppData\\Local\\Temp\\rust_mozprofilefgjib4"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1591682074559	Marionette	INFO	Listening on port 55113
+1591682074847	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILURE: Should pass a non-null uri
+1591682107448	Marionette	INFO	Stopped listening on port 55113
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+libpng warning: iCCP: cHRM chunk does not match sRGB

@@ -588,9 +588,6 @@ repair_type_manage_ttm_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
 # 点击查看(公有)
 # 刷新(公有)
 
-
-
-
 ########################################################################################################################
 """
     仓储管理
@@ -878,6 +875,8 @@ public_storage_each_task_name_input=By.ID,"name"
 public_storage_each_task_type_click=By.CSS_SELECTOR,"#type > div:nth-child(1)"
 # 选择类型
 public_storage_each_task_type_select=By.CSS_SELECTOR,"body>div:nth-of-type(3)>div>div>div>ul>li:first-child"
+# 选择类型(手动申请)
+public_storage_each_task_type_select_manual=By.CSS_SELECTOR,"body>div:nth-of-type(3)>div>div>div>ul>li:nth-child(2)"
 # 点击状态
 public_storage_each_task_status1_click=By.CSS_SELECTOR,"#status > div:nth-child(1)"
 # 选择状态
@@ -893,45 +892,37 @@ public_storage_each_task_approval_through_button=By.CSS_SELECTOR,"button.ant-btn
     库存修正单新增
 """
 # 点击库存修正单管理
-
+inventory_correction_order_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(3)>ul>li:nth-child(2)"
 # 点击新增
-
 # 输入名称
-
 # 输入申请理由
-
+inventory_correction_order_manage_insert_excute_input=By.ID,"applyReason"
 # 点击添加备件清单
-
+inventory_correction_order_manage_insert_component_bill_click=By.CSS_SELECTOR,".ant-btn-dashed"
 # 点击添加备件清单icon
-
+inventory_correction_order_manage_insert_component_bill_icon=By.CSS_SELECTOR,".anticon-setting"
 # 选择备件清单radio
-
+# 点击确定
 # 输入修正数量
-
+inventory_correction_order_manage_insert_amendment_num=By.ID,"spareNum[0]"
 # 点击状态
-
+inventory_correction_order_manage_insert_status_click=By.CSS_SELECTOR,"div.ant-select-selection"
 # 选择状态
-
+inventory_correction_order_manage_insert_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 点击保存
 
 # 输入名称
-
 # 点击类型
-
 # 选择类型
-
 # 点击状态
-
 # 选择状态
-
 # 点击查询
-
 # 点击审批
-
+inventory_correction_order_manage_insert_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 # 输入审批意见
-
-# 点击审批
-
+# 点击通过
+inventory_correction_order_manage_insert_approval_through=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
+########################################################################################################################
 
 
 
@@ -1487,29 +1478,10 @@ firm_infor_manage_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapp
 firm_infor_manage_edit_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 点击查看
 firm_infor_manage_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+########################################################################################################################
 
 """
-    我的学习资料管理
+    学习资料管理
 """
 """
     我的学习资料新增
@@ -1568,15 +1540,19 @@ study_data_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child
 # 点击查询
 # 点击审批
 study_data_approval_excute_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
+# 输入审批意见
+study_data_approval_excute_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击通过
+study_data_approval_excute_though_button=By.CSS_SELECTOR,"form.ant-form:nth-child(6) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 """
     学习资料重置
 """
 # 点击重置
-
 """
     学习资料审批查看
 """
-# 点击查看审批查看
+# 点击查看
+study_data_approval_excute_watch_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 
 """
     学习资料列表查询
@@ -1633,6 +1609,11 @@ study_data_manage_son_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-chil
 """
     学习资料管理(子)重置
 """
+# 点击重置
+
+
+
+
 
 
 
@@ -1758,30 +1739,6 @@ record_manage_son_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-ch
    档案管理(子)重置
 """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ################################################################################################################################
 """
     app公告管理
@@ -1821,6 +1778,4 @@ app_notice_manage_search_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-men
     app公告管理重置
 """
 # 点击重置(公有)
-
-
 ################################################################################################################################

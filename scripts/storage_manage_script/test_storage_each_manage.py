@@ -17,8 +17,15 @@ class TestDeptManage(unittest.TestCase):
     def tearDownClass(cls) -> None:
         GetDriver().quit_driver()
 
+    # 盘库任务新增到审批
+    @pytest.mark.run(order=1)
     def test_storage_each_task_approval(self):
         self.psem.storage_each_task_approval()
+
+    # 库存修正单新增到审批
+    @pytest.mark.run(order=2)
+    def test_inventory_correction_order_manage_approval(self):
+        self.psem.inventory_correction_order_manage_approval()
 
 
 if __name__ == '__main__':

@@ -131,14 +131,20 @@ class PageStorageEachManage(Base):
     def page_public_storage_each_task_name_input(self):
         self.base_input(page.public_storage_each_task_name_input, page.public_value)
 
+    # 输入名称1
+    def page_public_storage_each_task_name1_input(self):
+        self.base_input(page.public_storage_each_task_name_input, page.public_value2)
     # 点击类型
     def page_public_storage_each_task_type_click(self):
         self.base_click(page.public_storage_each_task_type_click)
 
-    # 选择类型
+    # 选择类型(盘库任务生成)
     def page_public_storage_each_task_type_select(self):
         self.base_click(page.public_storage_each_task_type_select)
 
+    # 手动申请
+    def page_public_storage_each_task_type_select_manual(self):
+        self.base_click(page.public_storage_each_task_type_select_manual)
     # 点击状态
     def page_public_storage_each_task_status1_click(self):
         self.base_click(page.public_storage_each_task_status1_click)
@@ -160,6 +166,54 @@ class PageStorageEachManage(Base):
     def page_public_storage_each_task_approval_through_button(self):
         self.base_click(page.public_storage_each_task_approval_through_button)
 
+
+    """
+        库存修正单管理新增、查询到审批
+    """
+    # 点击库存修正单管理
+    def page_inventory_correction_order_manage_click(self):
+        self.base_click(page.inventory_correction_order_manage_click)
+
+    # 点击新增
+    # 输入名称
+    # 输入申请理由
+    def page_inventory_correction_order_manage_insert_excute_input(self):
+        self.base_input(page.inventory_correction_order_manage_insert_excute_input,page.public_value)
+    # 点击添加备件清单
+    def page_inventory_correction_order_manage_insert_component_bill_click(self):
+        self.base_click(page.inventory_correction_order_manage_insert_component_bill_click)
+
+    # 点击备件清单icon
+    def page_inventory_correction_order_manage_insert_component_bill_icon(self):
+        self.base_click(page.inventory_correction_order_manage_insert_component_bill_icon)
+
+    # 点击备件清单radio
+    # 点击确定
+    # 输入修正数量
+    def page_inventory_correction_order_manage_insert_amendment_num(self):
+        self.base_input(page.inventory_correction_order_manage_insert_amendment_num,page.public_order_num)
+    # 点击状态
+    def page_inventory_correction_order_manage_insert_status_click(self):
+        self.base_click(page.inventory_correction_order_manage_insert_status_click)
+    # 选择状态
+    def page_inventory_correction_order_manage_insert_status_select(self):
+        self.base_click(page.inventory_correction_order_manage_insert_status_select)
+
+    # 点击保存
+    # 输入名称
+    # 点击类型
+    # 选择类型
+    # 点击状态
+    # 选择状态
+    # 点击查询
+    # 点击审批
+    def page_inventory_correction_order_manage_insert_approval_click(self):
+        self.base_click(page.inventory_correction_order_manage_insert_approval_click)
+
+    # 输入审批意见
+    # 点击审批
+    def page_inventory_correction_order_manage_insert_approval_through(self):
+        self.base_click(page.inventory_correction_order_manage_insert_approval_through)
     """
         组合业务方法
     """
@@ -229,4 +283,39 @@ class PageStorageEachManage(Base):
         self.page_storage_each_task_approval_click()
         self.page_public_storage_each_task_approval_device_input()
         self.page_public_storage_each_task_approval_through_button()
+        time.sleep(2)
+
+    # 库存修正单管理新增
+    def inventory_correction_order_manage_insert(self):
+        self.page_inventory_correction_order_manage_click()
+        self.page_storage_each_task_insert_click()
+        self.page_public_storage_each_task_name1_input()
+        self.page_inventory_correction_order_manage_insert_excute_input()
+        self.page_inventory_correction_order_manage_insert_component_bill_click()
+        self.page_inventory_correction_order_manage_insert_component_bill_icon()
+        self.page_public_storage_each_task_insert_excute_persion_radio()
+        self.page_public_storage_each_task_insert_excute_persion_sure_button()
+        self.page_inventory_correction_order_manage_insert_amendment_num()
+        self.page_inventory_correction_order_manage_insert_status_click()
+        self.page_inventory_correction_order_manage_insert_status_select()
+        self.page_storage_each_task_insert_save_button()
+        time.sleep(2)
+
+    # 库存修正单管理查询
+    def inventory_correction_order_manage_search(self):
+        self.page_public_storage_each_task_name1_input()
+        self.page_public_storage_each_task_type_click()
+        self.page_public_storage_each_task_type_select_manual()
+        self.page_public_storage_each_task_status1_click()
+        self.page_public_storage_each_task_status1_select()
+        self.page_public_storage_each_task_search_button()
+        time.sleep(2)
+
+    # 库存修正单审批
+    def inventory_correction_order_manage_approval(self):
+        self.inventory_correction_order_manage_insert()
+        self.inventory_correction_order_manage_search()
+        self.page_inventory_correction_order_manage_insert_approval_click()
+        self.page_public_storage_each_task_approval_device_input()
+        self.page_inventory_correction_order_manage_insert_approval_through()
         time.sleep(2)
