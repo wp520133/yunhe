@@ -22,6 +22,11 @@ class TestDeptManage(unittest.TestCase):
     def test_wait_excute_scrap_bill_out(self):
         self.pom.wait_excute_scrap_bill_out()
 
+    # 测试我的领用单的新增、到查询审批
+    @pytest.mark.run(order=2)
+    def test_wait_excute_mind_receive_bill_out(self):
+        self.pom.wait_excute_mind_receive_bill_out()
+
 
 if __name__ == '__main__':
     pytest.main()

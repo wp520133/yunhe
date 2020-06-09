@@ -596,6 +596,9 @@ repair_type_manage_ttm_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
     仓储管理
 """
 """
+    入库管理
+"""
+"""
     我的入库单新增→待审批入库单审批→待执行入库单入库
 """
 # 点击仓储管理
@@ -756,12 +759,178 @@ wait_excute_out_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul
 # 点击类型
 wait_excute_out_bill_type_click=By.CSS_SELECTOR,"#type > div:nth-child(1)"
 # 选择类型(报废出库)
-wait_excute_out_bill_select_nth2=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
 # 点击查询
 # 点击出库
 wait_excute_out_bill_out_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
 # 点击执行
 wait_excute_out_bill_out_excute_click=By.CSS_SELECTOR,"button.ant-btn-primary:nth-child(2)"
+"""
+    我的领用单新增
+"""
+# 点击领用单管理
+receive_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(2)"
+# 点击我的领用单
+mind_receive_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(2)>ul>li:first-child"
+# 点击新增
+# 输入领用单名称
+# 点击类型
+# 选择类型
+# 输入申请理由
+# 点击添加备件清单
+# 点击选择备件型号icon
+# 点击选择备件型号radio
+# 点击确定
+# 输入备件数量
+# 点击保存
+"""
+    新增的领用单审批
+"""
+# 点击待审批的领用单
+wait_approval_receive_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(2)>ul>li:nth-child(2)>ul>li:nth-child(2)"
+# 输入领用单名称
+# 点击状态
+# 选择状态
+# 点击查询
+# 点击审批
+# 输入审批意见
+# 点击通过
+"""
+    对审批过的领用单进行出库
+"""
+# 点击待执行的出库单
+# 输入出库单名称
+# 点击状态
+# 选择状态
+# 点击类型
+# 选择类型
+# 点击查询
+# 点击出库
+# 点击执行
+"""
+    盘库管理
+"""
+"""
+    盘库任务新增、执行到审批
+"""
+# 点击盘库管理
+storage_each_manage_click=By.CSS_SELECTOR,'#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(3)'
+# 点击盘库任务
+storage_each_task_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(3)>ul>li:first-child"
+# 点击新增
+storage_each_task_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入标题(public)
+public_storage_each_task_insert_title_input=By.ID,"title"
+# 点击任务等级(public)
+public_storage_each_task_insert_task_order_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择任务等级(public)
+public_storage_each_task_insert_task_order_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 输入执行内容
+storage_each_task_insert_excute_content_input=By.ID,"content"
+# 点击选择时间
+storage_each_task_insert_time_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前时间
+storage_each_task_insert_time_before_select=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后时间
+storage_each_task_insert_time_after_select=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(2) > div:nth-child(1)"
+# 点击执行人icon
+storage_each_task_insert_excute_persion_icon=By.CSS_SELECTOR,"div.ant-row:nth-child(5) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择执行人radio
+public_storage_each_task_insert_excute_persion_radio=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+public_storage_each_task_insert_excute_persion_sure_button=By.CSS_SELECTOR,'.ant-modal-footer > div:nth-child(1) > button:nth-child(2)'
+# 点击其他执行人icon
+storage_each_task_insert_other_excute_persion_icon=By.CSS_SELECTOR,"div.ant-row:nth-child(6) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择其他执行人radio
+# 点击确定
+# 点击添加备件型号
+storage_each_task_insert_component_type_click=By.CSS_SELECTOR,".ant-btn-dashed"
+# 点击添加备件型号icon
+storage_each_task_insert_component_type_icon=By.CSS_SELECTOR,".ant-col-sm-24 > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择添加备件型号radio
+# 点击确定
+# 点击保存
+storage_each_task_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 输入标题
+# 点击状态(public)
+public_storage_each_task_status_click=By.CSS_SELECTOR,"#level > div:nth-child(1)"
+# 选择状态(public)
+public_storage_each_task_status_select=By.CSS_SELECTOR,"body>div:nth-of-type(3)>div>div>div>ul>li:first-child"
+# 点击任务等级
+# 选择任务等级
+public_storage_each_task_search_order_select=By.CSS_SELECTOR,"body>div:nth-of-type(4)>div>div>div>ul>li:first-child"
+# 点击查询
+public_storage_each_task_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+# 点击执行
+public_storage_each_task_excute_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
+# 输入盘点数量
+public_storage_each_task_check_num=By.CSS_SELECTOR,"#sparePartsNum0"
+# 输入执行描述
+public_storage_each_task_excute_input=By.CSS_SELECTOR,"#executeDesc"
+# 输入备注
+public_storage_each_task_remark_input=By.CSS_SELECTOR,"#executeRemark"
+# 点击执行
+public_storage_each_task_excute_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+# 点击待审批的库存修正单
+wait_approval_inventory_correction_order=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li:nth-child(3)>ul>li:nth-child(3)"
+# 输入名称
+public_storage_each_task_name_input=By.ID,"name"
+# 点击类型
+public_storage_each_task_type_click=By.CSS_SELECTOR,"#type > div:nth-child(1)"
+# 选择类型
+public_storage_each_task_type_select=By.CSS_SELECTOR,"body>div:nth-of-type(3)>div>div>div>ul>li:first-child"
+# 点击状态
+public_storage_each_task_status1_click=By.CSS_SELECTOR,"#status > div:nth-child(1)"
+# 选择状态
+# 点击查询
+# 点击审批
+storage_each_task_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
+# 输入审批意见
+public_storage_each_task_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击通过
+public_storage_each_task_approval_through_button=By.CSS_SELECTOR,"button.ant-btn-primary:nth-child(2)"
+
+"""
+    库存修正单新增
+"""
+# 点击库存修正单管理
+
+# 点击新增
+
+# 输入名称
+
+# 输入申请理由
+
+# 点击添加备件清单
+
+# 点击添加备件清单icon
+
+# 选择备件清单radio
+
+# 输入修正数量
+
+# 点击状态
+
+# 选择状态
+
+# 点击保存
+
+# 输入名称
+
+# 点击类型
+
+# 选择类型
+
+# 点击状态
+
+# 选择状态
+
+# 点击查询
+
+# 点击审批
+
+# 输入审批意见
+
+# 点击审批
 
 
 
@@ -1655,46 +1824,3 @@ app_notice_manage_search_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-men
 
 
 ################################################################################################################################
-
-
-
-
-
-
-
-
-
-# # 点击仓储管理
-# warehouse_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-submenu-open:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(2)"
-# # 点击入库管理
-# storage_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-submenu-open:nth-child(2)>ul>li:first-child"
-# # 点击我的入库单
-# mind_storage_bill_click_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(1) > span"
-#
-# # 仓储管理→入库管理→我的入库单查询(公有)
-#
-# # 仓储管理→入库管理→我的入库单新增
-# mind_storage_bill_insert_type_click = By.CSS_SELECTOR, ".ant-select-selection"
-# mind_storage_bill_insert_type_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(1)"
-# mind_storage_bill_insert_commpont_bill_click = By.CSS_SELECTOR, ".ant-btn-dashed"
-# mind_storage_bill_insert_commpont_bill_icon = ".anticon-setting"
-# mind_storage_bill_insert_save = By.CSS_SELECTOR, ".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:last-child"
-#
-# # 仓储管理→点击待审批入库单
-# wait_approval_storage_bill_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(2) > span"
-#
-# # 仓储管理→待审批入库单查询(公有)
-#
-# # 仓储管理→待审批入库单审批
-# wait_approval_storage_bill_approval_button = By.CSS_SELECTOR, "button.ant-btn-link:nth-child(1)"
-# wait_approval_storage_bill_approval_through_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(2)"
-#
-# # 仓储管理→待审批入库单入库
-# wait_approval_storage_bill_put_button = By.CSS_SELECTOR, "button.ant-btn-link:nth-child(1)"
-# wait_approval_storage_bill_excute_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(2)"
-#
-#
-# # 仓储管理→点击出库管理
-# put_manage_click_button=By.CSS_SELECTOR, ""
-# # 仓储管理→点击报废单管理
-# mind_scrap_bill_click_button=By.CSS_SELECTOR, ""
