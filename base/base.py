@@ -28,9 +28,6 @@ class Base:
         el = self.base_find_element(loc)
         el.clear()
         el.send_keys(value)
-    # 获取文本
-    def base_get_html(self,loc):
-        return self.base_find_element(loc).get_attribute("textContent")
 
     # 获取文本方法
     def base_get_text(self, loc):
@@ -52,6 +49,16 @@ class Base:
     # 网页回退
     def base_back(self):
         self.driver.back()
+
+    # 判断查找元素是否成功,成功返回true,失败返回false
+    def base_if_success(self, loc):
+        try:
+            self.base_find_element(loc, timeout=2)
+            return True
+        except:
+            return False
+
+
 
     """
         系统管理登录
