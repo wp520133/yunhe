@@ -5,7 +5,7 @@ from base.base import Base
 
 class PageOutManage(Base):
     """
-        出库管理→报废单管理→我的报废单新增
+        我的报废单新增→待审批报废单审批→待执行的出库单出库
     """
 
     # 点击仓储管理
@@ -110,19 +110,71 @@ class PageOutManage(Base):
 
     # 选择类型(报废出库)
     def page_wait_excute_out_bill_select_nth2(self):
-        self.base_click(page.wait_excute_out_bill_select_nth2)
+        self.base_click_down(page.wait_excute_out_bill_type_click)
+        self.base_click_enter(page.wait_excute_out_bill_type_click)
+
+    # 选择类型(领用单出库)
+    def page_wait_excute_out_bill_select_nth1(self):
+        self.base_click_enter(page.wait_excute_out_bill_type_click)
+        self.base_click_enter(page.wait_excute_out_bill_type_click)
 
     # 点击查询
     # 点击出库
     def page_wait_excute_out_bill_out_click(self):
         self.base_click(page.wait_excute_out_bill_out_click)
+
     # 点击执行
     def page_wait_excute_out_bill_out_excute_click(self):
         self.base_click(page.wait_excute_out_bill_out_excute_click)
 
     """
-        我的报废单新增→待审批报废单审批→待执行的出库单出库
+        我的领用单新增→待审批的领用单审批→待执行的出库单出库
     """
+
+    # 点击领用单管理
+    def receive_bill_manage_click(self):
+        self.base_click(page.receive_manage_click)
+
+    # 点击我的领用单
+    def mind_receive_bill_manage_click(self):
+        self.base_click(page.mind_receive_bill_click)
+
+    # 点击新增
+    # 输入报废单名称
+    # 点击类型
+    # 选择类型
+    # 输入申请理由
+    # 点击添加备件清单
+    # 点击选择备件型号icon
+    # 点击选择备件型号radio
+    # 点击确定
+    # 输入备件数量
+    # 点击保存
+    # 点击待审批的领用单
+    def page_wait_approval_receive_bill_click(self):
+        self.base_click(page.wait_approval_receive_bill_click)
+
+    # 输入领用单名称
+    # 点击状态
+    # 选择状态
+    # 点击查询
+    # 点击审批
+    # 输入审批意见
+    # 点击通过
+    # 点击待执行的出库单
+    # 输入出库单名称(报废单名称)
+    # 点击状态
+    # 选择状态
+    # 点击类型
+    # 选择类型
+    # 点击查询
+    # 点击出库
+    # 点击执行
+
+    """
+        组合业务方法
+    """
+
     # 我的报废单新增
     def mind_scrap_bill_insert(self):
         self.page_storage_manage_click()
@@ -159,10 +211,8 @@ class PageOutManage(Base):
         self.page_public_scrap_bill_approval_through_button()
         time.sleep(2)
 
-    # 待执行的出库单出库
-    def wait_excute_scrap_bill_out(self):
-        self.mind_scrap_bill_insert()
-        self.wait_approval_scrap_bill_approval()
+    # 待执行的出库单查询(报废单)
+    def wait_excute_scrap_bill_search(self):
         self.page_wait_excute_out_bill_click()
         self.page_public_scrap_bill_insert_name_input()
         self.page_public_scrap_bill_status_click()
@@ -170,6 +220,65 @@ class PageOutManage(Base):
         self.page_wait_excute_out_bill_type_click()
         self.page_wait_excute_out_bill_select_nth2()
         self.page_public_scrap_bill_search_button()
+
+    # 待执行的出库单出库(报废单)
+    def wait_excute_scrap_bill_out(self):
+        self.mind_scrap_bill_insert()
+        self.wait_approval_scrap_bill_approval()
+        self.wait_excute_scrap_bill_search()
+        self.page_wait_excute_out_bill_out_click()
+        self.page_wait_excute_out_bill_out_excute_click()
+        time.sleep(2)
+
+    # 我的领用单新增
+    def mind_receive_bill_insert(self):
+        self.receive_bill_manage_click()
+        self.mind_receive_bill_manage_click()
+        self.page_public_scrap_bill_insert_click()
+        self.page_public_scrap_bill_insert_name_input()
+        self.page_public_scrap_bill_type_click()
+        self.page_public_scrap_bill_type_select()
+        self.page_public_scrap_bill_insert_excute_input()
+        self.page_public_scrap_bill_insert_part_bill_click()
+        self.page_public_scrap_bill_insert_part_bill_icon()
+        self.page_public_scrap_bill_insert_part_bill_radio()
+        self.page_public_scrap_bill_insert_sure_button()
+        self.page_public_scrap_bill_insert_num_input()
+        self.page_public_scrap_bill_insert_save_button()
+        time.sleep(2)
+
+    # 待审批的领用单查询
+    def mind_receive_bill_search(self):
+        self.page_wait_approval_receive_bill_click()
+        self.page_public_scrap_bill_insert_name_input()
+        self.page_public_scrap_bill_status_click()
+        self.page_public_scrap_bill_status_select()
+        self.page_public_scrap_bill_search_button()
+        time.sleep(2)
+
+    # 待审批的领用单审批
+    def mind_receive_bill_approval(self):
+        self.mind_receive_bill_search()
+        self.page_public_scrap_bill_approval_button()
+        self.page_public_scrap_bill_approval_device_input()
+        self.page_public_scrap_bill_approval_through_button()
+        time.sleep(2)
+
+    # 待执行的出库单查询(领用单)
+    def wait_excute_mind_receive_bill_search(self):
+        self.page_wait_excute_out_bill_click()
+        self.page_public_scrap_bill_insert_name_input()
+        self.page_public_scrap_bill_status_click()
+        self.page_public_scrap_bill_status_select()
+        self.page_wait_excute_out_bill_type_click()
+        self.page_wait_excute_out_bill_select_nth1()
+        self.page_public_scrap_bill_search_button()
+
+    # 待执行的出库单出库(领用单)
+    def wait_excute_mind_receive_bill_out(self):
+        self.mind_receive_bill_insert()
+        self.mind_receive_bill_approval()
+        self.wait_excute_mind_receive_bill_search()
         self.page_wait_excute_out_bill_out_click()
         self.page_wait_excute_out_bill_out_excute_click()
         time.sleep(2)

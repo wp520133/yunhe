@@ -23,6 +23,11 @@ class Base:
         el = self.base_find_element(loc)
         el.send_keys(Keys.ENTER)
 
+    # 使用向下键确认模拟点击方法
+    def base_click_down(self, loc):
+        el = self.base_find_element(loc)
+        el.send_keys(Keys.DOWN)
+
     # 输入方法
     def base_input(self, loc, value):
         el = self.base_find_element(loc)
