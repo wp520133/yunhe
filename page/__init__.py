@@ -1783,10 +1783,83 @@ engineering_project_manage_insert_time_click=By.CSS_SELECTOR,".ant-calendar-pick
 engineering_project_manage_insert_before_time_click=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
 # 选择后时间
 engineering_project_manage_insert_after_time_click=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(3) > div:nth-child(1)"
+# 点击确定
+engineering_project_manage_insert_time_sure_button=By.CSS_SELECTOR,".ant-calendar-ok-btn"
 # 输入描述
 engineering_project_manage_insert_desc_input=By.CSS_SELECTOR,"#desc"
 # 点击保存
 engineering_project_manage_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+
+
+"""
+    我的宣传公告新增
+"""
+# 点击宣传公告管理
+advertice_notice_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(4)>div:first-child"
+# 点击我的宣传公告
+mind_advertice_notice_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(4)>ul>li:nth-child(3)"
+# 点击新增
+mind_advertice_notice_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入名称
+mind_advertice_notice_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+# 输入描述
+mind_advertice_notice_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
+# 上传附件
+mind_advertice_notice_insert_upload_file=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
+# 点击保存
+mind_advertice_notice_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+"""
+    宣传公告审批查询
+"""
+# 点击宣传公告审批
+advertice_notice_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(4)>ul>li:nth-child(4)"
+# 输入名称
+advertice_notice_approval_search_name_input=By.ID,"name"
+# 输入描述
+advertice_notice_approval_search_desc_input=By.ID,"desc"
+# 点击状态
+advertice_notice_approval_search_status_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择状态
+advertice_notice_approval_search_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击查询
+advertice_notice_approval_search_button=By.CSS_SELECTOR,".ant-btn-primary"
+"""
+    宣传公告审批审批
+"""
+# 点击审批
+advertice_notice_approval_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
+# 输入审批意见
+advertice_notice_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击通过
+advertice_notice_approval_device_through=By.CSS_SELECTOR,"form.ant-form:nth-child(6) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+
+
+"""
+    宣传公告管理新增
+"""
+# 点击宣传公告管理(子)
+advertice_notice_son_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(4)>ul>li:nth-child(2)"
+# 点击新增
+# 输入名称
+# 输入描述
+# 上传附件
+# 点击保存
+"""
+    宣传公告管理查询
+"""
+# 输入名称
+# 输入描述
+# 点击状态
+# 选择状态
+# 点击查询
+
+"""
+    宣传公告管理审批
+"""
+# 点击审批
+advertice_notice_son_approval_approval_click=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
+# 输入审批意见
+# 点击通过
 ########################################################################################################################
 """
     app公告管理

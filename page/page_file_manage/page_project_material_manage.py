@@ -28,6 +28,10 @@ class PageProjectMaterialManage(Base):
     def page_mind_material_insert_name_input(self):
         self.base_input(page.mind_material_insert_name_input, page.public_value)
 
+    # 输入名称2
+    def page_mind_material_insert_name2_input(self):
+        self.base_input(page.mind_material_insert_name_input, page.public_value2)
+
     # 点击选择工程icon
     def page_mind_material_insert_project_icon(self):
         self.base_click(page.mind_material_insert_project_icon)
@@ -64,6 +68,10 @@ class PageProjectMaterialManage(Base):
     # 输入名称
     def page_project_approval_search_name_input(self):
         self.base_input(page.project_approval_search_name_input, page.public_value)
+
+    # 输入名称2
+    def page_project_approval_search_name2_input(self):
+        self.base_input(page.project_approval_search_name_input, page.public_value2)
 
     # 输入描述
     def page_project_approval_search_desc_input(self):
@@ -175,6 +183,10 @@ class PageProjectMaterialManage(Base):
     def page_engineering_project_manage_insert_after_time_click(self):
         self.base_click(page.engineering_project_manage_insert_after_time_click)
 
+    # 点击确定
+    def page_engineering_project_manage_insert_time_sure_button(self):
+        self.base_click(page.engineering_project_manage_insert_time_sure_button)
+
     # 输入描述
     def page_engineering_project_manage_insert_desc_input(self):
         self.base_input(page.engineering_project_manage_insert_desc_input, page.public_value)
@@ -227,8 +239,9 @@ class PageProjectMaterialManage(Base):
 
     # 项目材料管理的新增到审批
     def project_material_son_ISA(self):
+        self.page_project_material_son_click()
         self.page_mind_material_insert_click()
-        self.page_mind_material_insert_name_input()
+        self.page_mind_material_insert_name2_input()
         self.page_mind_material_insert_project_icon()
         self.page_mind_material_insert_project_radio()
         self.page_mind_material_insert_sure_button()
@@ -236,7 +249,7 @@ class PageProjectMaterialManage(Base):
         self.page_mind_material_insert_upload_file()
         self.page_mind_material_insert_save_button()
         time.sleep(2)
-        self.page_project_approval_search_name_input()
+        self.page_project_approval_search_name2_input()
         self.page_project_approval_search_desc_input()
         self.page_project_approval_search_status_click()
         self.page_project_approval_search_status_select()
@@ -259,6 +272,7 @@ class PageProjectMaterialManage(Base):
         self.page_engineering_project_manage_insert_time_click()
         self.page_engineering_project_manage_insert_before_time_click()
         self.page_engineering_project_manage_insert_after_time_click()
+        self.page_engineering_project_manage_insert_time_sure_button()
         self.page_engineering_project_manage_insert_desc_input()
         self.page_engineering_project_manage_insert_save_button()
         time.sleep(2)

@@ -16,15 +16,19 @@ class TestDeptManage(unittest.TestCase):
     @classmethod
     def tearDownClass(cls) -> None:
         GetDriver().quit_driver()
+
     # 测试我的项目材料新增到审批
+    @pytest.mark.run(order=1)
     def test_mind_material_ISA(self):
         self.ppmm.mind_material_ISA()
 
     # 测试项目材料管理(子)新增到审批
+    @pytest.mark.run(order=2)
     def test_project_material_son_ISA(self):
         self.ppmm.project_material_son_ISA()
 
     # 测试工程项目管理新增
+    @pytest.mark.run(order=3)
     def test_engineering_project_manage_insert(self):
         self.ppmm.engineering_project_manage_insert()
 
