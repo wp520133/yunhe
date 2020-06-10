@@ -1635,191 +1635,159 @@ mind_data_manage_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:
     档案审批查询
 """
 # 点击档案审批
-
+record_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(4)"
 # 输入名称
-
+record_approval_search_name_input=By.ID,"name"
 # 输入描述
-
+record_approval_search_desc_input=By.ID,"desc"
 # 点击状态
-
+record_approval_search_status_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择状态
-
+record_approval_search_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 点击查询
-
+record_approval_search_button=By.CSS_SELECTOR,".ant-btn-primary"
 """
     档案审批审批
 """
 # 点击审批
-
+record_approval_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 输入审批意见
-
+record_approval_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
 # 点击通过
-
+record_approval_approval_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(6) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 
 """
     档案管理(子)新增
 """
-# 点击档案管理(子)新增
-
+# 点击档案管理(子)
+data_manage_son_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(2)"
 # 点击新增
-
 # 输入名称
-
 # 输入描述
-
 # 点击附件
-
 # 点击保存
 
 """
     档案管理(子)查询
 """
 # 输入名称
-
 # 输入描述
-
 # 点击状态
-
 # 选择状态
-
 # 点击查询
 
 """
     档案管理(子)审批
 """
 # 点击审批
-
+data_manage_son_approval_click=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
 # 输入审批意见
-
 # 点击通过
 
-
-
-
-
-
 """
-    我的档案、查看、重置、编辑→档案审批查询、审批、查看、重置
+    我的项目材料新增
 """
-"""
-    我的档案新增
-"""
-# 点击档案管理
-record_manage_click=By.CSS_SELECTOR,'#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>div'
-# 点击我的档案
-mine_record_click=By.CSS_SELECTOR,'#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(3)'
-# 点击新增(公有)
-# 输入名称
-mine_record_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
-# 输入描述
-mine_record_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
-# 点击上传按钮
-mine_recorda_upload_file_button=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
-# 点击保存
-mine_record_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
-
-"""
-    我的档案查询
-"""
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
-
-"""
-    我的档案重置
-"""
-# 点击重置(公有)
-
-"""
-    我的档案编辑
-"""
-# 点击编辑(公有)
-
-# 点击查看(公有)
-
-"""
-    档案审批查询
-"""
-# 点击档案审批
-record_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(4)"
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
-# 点击审批(公有)
-
-"""
-    档案审批重置
-"""
-# 点击重置(公有)
-
-"""
-    档案审批查看
-"""
-# 点击查看(公有)
-
-"""
-    档案列表查询
-"""
-# 点击档案列表
-record_list_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(4)"
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击查询(公有)
-"""
-    档案列表重置
-"""
-# 点击重置(公有)
-
-"""
-    档案列表查看
-"""
-# 点击查看(公有)
-
-"""
-    档案管理(子)新增
-"""
-# 点击档案管理(子)模块
-record_manage_son_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(2)>ul>li:nth-child(2)"
+# 点击项目材料管理
+project_material_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(3)>div"
+# 点击我的项目材料
+mind_material_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(3)>ul>li:nth-child(4)"
 # 点击新增
-record_manage_son_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+mind_material_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
 # 输入名称
-record_manage_son_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+mind_material_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+# 点击选择工程icon
+mind_material_insert_project_icon=By.CSS_SELECTOR,".anticon-setting"
+# 选择工程radio
+mind_material_insert_project_radio=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input[type='radio']"
+# 点击确定
+mind_material_insert_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
 # 输入描述
-record_manage_son_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
-# 点击上传附件按钮
-record_manage_son_updata_click=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
+mind_material_insert_desc_input=By.CSS_SELECTOR,"textarea.ant-input"
+# 点击上传附件
+mind_material_insert_upload_file=By.CSS_SELECTOR,"span.ant-upload > button:nth-child(2)"
 # 点击保存
-record_manage_son_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+mind_material_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
 """
-    档案管理(子)查询
+    项目材料审批查询
 """
-# 输入名称(公有)
-# 输入描述(公有)
-# 点击状态(公有)
-# 选择状态(公有)
-# 点击查询(公有)
+# 点击项目材料审批
+project_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(3)>ul>li:nth-child(5)"
+# 输入名称
+project_approval_search_name_input=By.ID,"name"
+# 输入描述
+project_approval_search_desc_input=By.ID,"desc"
+# 点击状态
+project_approval_search_status_click=By.CSS_SELECTOR,".ant-select-selection"
+# 选择状态
+project_approval_search_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击查询
+project_approval_search_button=By.CSS_SELECTOR,".ant-btn-primary"
 """
-    档案管理(子)编辑
-"""
-# 点击编辑(公有)
-"""
-    档案管理(子)审批
-"""
-# 点击审批(公有)
-
-"""
-    档案管理(子)查看
-"""
-# 点击查看(公有)
-"""
-   档案管理(子)重置
+    项目材料审批查询后审批
 """
 
-################################################################################################################################
+# 点击审批
+project_approval_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
+# 输入审批意见
+project_approval_approval_device_input=By.CSS_SELECTOR,"#auditOpinion"
+# 点击通过
+project_approval_approval_device_through=By.CSS_SELECTOR,"form.ant-form:nth-child(7) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+"""
+    项目材料管理新增
+"""
+# 点击项目材料管理(子)
+project_material_son_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(3)>ul>li:nth-child(3)"
+# 点击新增
+# 输入名称
+# 点击选择工程icon
+# 选择工程radio
+# 点击确定
+# 输入描述
+# 点击上传附件
+# 点击保存
+"""
+    项目材料管理查询
+"""
+# 输入名称
+# 输入描述
+# 点击状态
+# 选择状态
+# 点击查询
+"""
+    项目材料管理审批
+"""
+# 点击审批
+project_material_son_approval_click=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
+# 输入审批意见
+# 点击通过
+"""
+    工程项目管理新增
+"""
+# 点击工程项目管理
+engineering_project_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(7)>ul>li:nth-child(3)>ul>li:nth-child(1)"
+# 点击新增
+engineering_project_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入名称
+engineering_project_manage_insert_name_input=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+# 点击状态
+engineering_project_manage_insert_status_click=By.CSS_SELECTOR,".ant-form-horizontal > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+# 选择状态
+engineering_project_manage_insert_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 输入造价
+engineering_project_manage_insert_price_input=By.CSS_SELECTOR,"#cost"
+# 输入造价单位
+engineering_project_manage_insert_price_unit=By.CSS_SELECTOR,"#costUnit"
+# 点击选择时间
+engineering_project_manage_insert_time_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择前时间
+engineering_project_manage_insert_before_time_click=By.CSS_SELECTOR,".ant-calendar-today > div:nth-child(1)"
+# 选择后时间
+engineering_project_manage_insert_after_time_click=By.CSS_SELECTOR,"div.ant-calendar-range-part:nth-child(3) > div:nth-child(2) > div:nth-child(2) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(3) > div:nth-child(1)"
+# 输入描述
+engineering_project_manage_insert_desc_input=By.CSS_SELECTOR,"#desc"
+# 点击保存
+engineering_project_manage_insert_save_button=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+########################################################################################################################
 """
     app公告管理
 """
@@ -1858,4 +1826,4 @@ app_notice_manage_search_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-men
     app公告管理重置
 """
 # 点击重置(公有)
-################################################################################################################################
+########################################################################################################################
