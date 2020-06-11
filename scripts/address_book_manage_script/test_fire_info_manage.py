@@ -1,5 +1,5 @@
 import unittest
-from page.page_firm_info_manage import PageFirmInfoManage
+from page.page_adress_book_manage.page_firm_info_list import PageFirmInfoManage
 import page
 from base.get_driver import GetDriver
 import allure
