@@ -1,5 +1,5 @@
 import unittest
-from page.page_adress_book_manage.page_firm_info_list import PageFirmInfoManage
+from page.page_adress_book_manage.page_firm_info_list import PageFirmInfoList
 import page
 from base.get_driver import GetDriver
 import allure
@@ -12,7 +12,7 @@ class TestDeptManage(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.driver = GetDriver().get_driver()
-        cls.pfim = PageFirmInfoManage(cls.driver)
+        cls.pfim = PageFirmInfoList(cls.driver)
         cls.pfim.system_login("admin", 123456)
 
     @classmethod

@@ -10,7 +10,7 @@ class TestSystemClassManage(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = GetDriver().get_driver()
         cls.prcm = PageRepairClassManage(cls.driver)
-        cls.prcm.system_login("admin", 123456)
+        cls.prcm.system_login()
 
     @classmethod
     def tearDownClass(cls) -> None:

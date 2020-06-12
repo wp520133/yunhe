@@ -104,9 +104,9 @@ class PageUnitsTypeManage(Base):
     def page_units_type_manage_search_brand_name_input(self):
         self.base_input(page.public_brand_name_input, page.public_value)
 
-    # 输入编号
-    def page_units_type_manage_search_code_input(self):
-        self.base_input(page.public_code_input, page.public_order_num)
+    # # 输入编号
+    # def page_units_type_manage_search_code_input(self):
+    #     self.base_input(page.public_code_input, page.public_order_num)
 
     # 点击查询
     def page_units_type_manage_search_button(self):
@@ -173,7 +173,7 @@ class PageUnitsTypeManage(Base):
     def units_type_manage_search(self):
         self.page_units_type_manage_search_units_type_name_input()
         self.page_units_type_manage_search_brand_name_input()
-        self.page_units_type_manage_search_code_input()
+        # self.page_units_type_manage_search_code_input()
         self.page_units_type_manage_search_button()
         time.sleep(2)
 

@@ -48,6 +48,14 @@ class PageRepairTypeManage(Base):
     def page_repair_type_manage_cu_input(self):
         self.base_input(page.public_countUnit_input, page.public_order_num)
 
+    # 输入采购单价
+    def page_repair_type_manage_price_input(self):
+        self.base_input(page.repair_type_manage_price_input, page.public_order_num)
+
+    # 输入采购单位
+    def page_repair_type_manage_price_unit(self):
+        self.base_input(page.repair_type_manage_price_unit, page.public_value_num2)
+
     # 点击厂商名称
     def page_repair_type_manage_shop_name_click(self):
         self.base_click(page.repair_type_manage_shop_name_click)
@@ -152,6 +160,8 @@ class PageRepairTypeManage(Base):
         self.page_repair_type_manage_super_repair_type_select()
         self.page_repair_type_manage_repair_type_name_input()
         self.page_repair_type_manage_cu_input()
+        self.page_repair_type_manage_price_input()
+        self.page_repair_type_manage_price_unit()
         self.page_repair_type_manage_shop_name_click()
         self.page_repair_type_manage_shop_name_select()
         self.page_repair_type_manage_brand_name_input()
@@ -179,6 +189,8 @@ class PageRepairTypeManage(Base):
         self.page_repair_type_manage_edit_button()
         self.page_repair_type_manage_repair_type_name_input()
         self.page_repair_type_manage_cu_input()
+        self.page_repair_type_manage_price_input()
+        self.page_repair_type_manage_price_unit()
         self.page_repair_type_manage_shop_name_click()
         self.page_repair_type_manage_shop_name_select()
         self.page_repair_type_manage_brand_name_input()

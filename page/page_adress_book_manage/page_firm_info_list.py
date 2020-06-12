@@ -3,7 +3,7 @@ import time
 from base.base import Base
 
 
-class PageFirmInfoManage(Base):
+class PageFirmInfoList(Base):
     """
         企业信息列表新增
     """

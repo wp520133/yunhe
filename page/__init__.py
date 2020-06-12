@@ -11,8 +11,9 @@ value_256=r'([a-zA-Z]{256,257})'
 password = r'(^\d{6,9}$)'
 lindlinephone= r'(^0\d{2,3}-\d{7,8}$)'
 order = r'(^\d{1,2}$)'
-moilePhone = r'(^1[3|5|7|8|]\d{9}$)'
+moilePhone = r'(^1[3|5|7|8]\d{9}$)'
 email=r'([1-9]\d{7,10}@qq\.com)'
+idCardNo=r'(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)'
 xeger = Xeger()
 publicValue = xeger.xeger(value)
 publicValue2 = xeger.xeger(value)
@@ -23,6 +24,7 @@ publicValue_num_2 = xeger.xeger(value2)
 publicPassword = xeger.xeger(password)
 publicMoilePhone = xeger.xeger(moilePhone)
 publicLindLiePhone=xeger.xeger(lindlinephone)
+publicIdCardNo=xeger.xeger(idCardNo)
 publicEmail=xeger.xeger(email)
 publicOrder = xeger.xeger(order)
 publicOrder2 = xeger.xeger(order)
@@ -37,6 +39,7 @@ public_value_num2=publicValue_num_2
 public_password = publicPassword
 public_moile_phone = publicMoilePhone
 public_land_line_phone=publicLindLiePhone
+public_id_card_no=publicIdCardNo
 public_email=publicEmail
 
 # 公共的用户名输入
@@ -543,9 +546,12 @@ repair_type_manage_super_repair_type_click=By.CSS_SELECTOR,"#pid > div:nth-child
 repair_type_manage_super_repair_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 
 # 输入备件型号名称(公有)
-
 # 输入计数单位(公有)
 
+# 输入采购单价
+repair_type_manage_price_input=By.ID,"purchasingPrice"
+# 输入采购单位
+repair_type_manage_price_unit=By.ID,"purchasingPriceUnit"
 # 点击厂商名称
 repair_type_manage_shop_name_click=By.CSS_SELECTOR,"#companyId > div:nth-child(1) > div:nth-child(1)"
 # 选择厂商名称
@@ -1478,6 +1484,78 @@ firm_infor_manage_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapp
 firm_infor_manage_edit_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)"
 # 点击查看
 firm_infor_manage_watch_button=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(1)"
+
+"""
+   员工信息列表新增
+"""
+# 点击员工信息列表
+staffs_info_list_click=By.CSS_SELECTOR,"li.ant-menu-submenu:nth-child(6) > ul>li:nth-child(2)"
+# 点击新增
+staffs_info_list_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+# 输入姓名
+staffs_info_list_insert_name_input=By.ID,"name"
+# 点击性别
+staffs_info_list_insert_sex_click=By.CSS_SELECTOR,"#sex > div:nth-child(1)"
+# 选择性别
+staffs_info_list_insert_sex_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击状态
+staffs_info_list_insert_status_click=By.CSS_SELECTOR,"#status > div:nth-child(1)"
+# 选择状态
+staffs_info_list_insert_status_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:nth-child(1)"
+# 点击入职时间
+staffs_info_list_insert_time_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择入职时间
+staffs_info_list_insert_time_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
+# 点击部门
+staffs_info_list_insert_dept_click=By.CSS_SELECTOR,"span.ant-select-selection"
+# 选择部门
+staffs_info_list_insert_dept_select=By.CSS_SELECTOR,".ant-select-tree-node-content-wrapper-close > span:nth-child(1)"
+# 点击岗位
+staffs_info_list_insert_job_click=By.CSS_SELECTOR,"#jobName > div:nth-child(1)"
+# 选择岗位
+staffs_info_list_insert_job_select=By.CSS_SELECTOR,"body>div:nth-child(8)>div>div>div>ul>li:first-child"
+# 点击岗位等级
+staffs_info_list_insert_job_order_click=By.CSS_SELECTOR,"#jobLevel > div:nth-child(1)"
+# 选择岗位等级,使用了模拟按键
+# staffs_info_list_insert_job_order_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:first-child"
+# 输入联系电话
+staffs_info_list_insert_mobile_phone_input=By.ID,"tel"
+# 输入座机电话
+staffs_info_list_insert_phone_input=By.ID,"telephone"
+
+# 输入微信号
+staffs_info_list_insert_vx_num_input=By.ID,"wechatNo"
+
+# 输入身份证
+staffs_info_list_insert_idcardno_input=By.ID,"idCardNo"
+# 输入现住址
+staffs_info_list_insert_addr_input=By.ID,"addr"
+# 输入户口所在地
+staffs_info_list_insert_registered_permanent_residence_input=By.ID,"registeredPermanentResidence"
+# 输入紧急联系人
+staffs_info_list_insert_emergency_contact_name_input=By.ID,"emergencyContactName"
+# 输入紧急联系人电话
+staffs_info_list_insert_emergency_contact_phone_input=By.ID,"emergencyContactPhone"
+# 输入婚孕情况
+staffs_info_list_insert_marriage_childbirth_status_input=By.ID,"marriageChildbirthStatus"
+# 输入技术特长
+staffs_info_list_insert_tech_input=By.ID,"tech"
+# 点击保存
+staffs_info_list_insert_save_button=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+"""
+    员工信息列表查询
+"""
+# 点击人员状态
+
+# 选择人员状态
+
+# 输入姓名
+
+# 点击岗位
+
+# 选择岗位
+
+# 点击查询
 
 ########################################################################################################################
 
