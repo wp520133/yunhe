@@ -147,4 +147,3 @@ class TestPageUserManage(Base):
         self.page_user_manage_ban()
         self.page_user_manage_sure_ban()
         time.sleep(2)
-
