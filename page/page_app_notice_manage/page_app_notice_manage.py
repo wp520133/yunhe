@@ -26,17 +26,17 @@ class PageAppNoticeManage(Base):
     def page_app_notice_manage_insert_title_input(self, title):
         self.base_input(page.public_title_input, title)
 
-    # 获取输入公告提示
+    # 判断公告提示语是否存在
     def page_app_notice_manage_insert_title_hint(self):
-        self.base_get_html(page.app_notice_manage_insert_title_hint)
+        self.base_element_is_exist(page.app_notice_manage_insert_title_hint)
 
     # 输入公告内容
     def page_app_notice_manage_insert_content_input(self, content):
         self.base_input(page.public_content_input, content)
 
-    # 输入公告内容提示
+    # 判断公告提示语是否存在
     def page_app_notice_manage_insert_content_hint(self):
-        self.base_get_html(page.app_notice_manage_insert_content_hint)
+        self.base_element_is_exist(page.app_notice_manage_insert_content_hint)
 
     # 点击公告类型
     def page_app_notice_manage_insert_type_click(self):
@@ -46,9 +46,9 @@ class PageAppNoticeManage(Base):
     def page_app_notice_manage_insert_type_select(self):
         self.base_click(page.app_notice_manage_insert_type_select)
 
-    # 输入公告类型提示
+    # 输入公告类型提示语
     def page_app_notice_manage_insert_type_hint(self):
-        self.base_get_html(page.app_notice_manage_insert_type_hint)
+        self.base_get_text(page.app_notice_manage_insert_type_hint)
 
     # 点击确定
     def page_app_notice_manage_insert_sure_button(self):
@@ -58,6 +58,17 @@ class PageAppNoticeManage(Base):
     def page_app_notice_manage_insert_cross(self):
         self.base_click(page.app_notice_manage_insert_cross)
 
+    # 判断新增APP公告文字
+    def page_app_notice_manage_insert_title_text(self):
+        self.base_element_is_exist(page.app_notice_manage_insert_head_text)
+
+    # 获取公告文字
+    def page_app_notice_manage_insert_title_text2(self):
+        self.base_get_text(page.app_notice_manage_insert_head_text)
+
+    # 点击取消按钮
+    def page_app_notice_manage_insert_cancel(self):
+        self.base_click(page.app_notice_manage_insert_cancel)
     """
         app公告管理查询
     """

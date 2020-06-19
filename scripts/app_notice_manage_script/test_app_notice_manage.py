@@ -3,9 +3,12 @@ from page.page_app_notice_manage.page_app_notice_manage import PageAppNoticeMana
 from base.get_driver import GetDriver
 import page
 import allure
+import time
 import pytest
 from parameterized import parameterized
-from tools.read_txt import read_txt
+from tools.read_json import read_json
+
+
 # 已经完成,缺新增校验
 class TestDeptManage(unittest.TestCase):
     driver = None
@@ -14,32 +17,51 @@ class TestDeptManage(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = GetDriver().get_driver()
         cls.panm = PageAppNoticeManage(cls.driver)
-        cls.panm.system_login("admin", 123456)
+        cls.panm.system_login()
 
     @classmethod
     def tearDownClass(cls) -> None:
         GetDriver().quit_driver()
 
-    # # 测试新增
-    # @pytest.mark.run(order=1)
+    # 测试新增
+
     # @allure.step(title="App公告管理新增")
+    # @pytest.mark.run(order=1)
     # def test_app_notice_manage_insert(self):
     #     self.panm.app_notice_manage_insert(page.public_value, page.public_value2)
+    #
+    # # 对新增字段做校验处理
 
-    # 对新增字段做校验处理
-    @parameterized.expand([(page.public_value_51,page.public_value_256),("","")])
-    def test_app_notice_manage_insert_test(self,title, content):
+    @parameterized.expand(read_json("login.json"))
+    # @pytest.mark.run(order=2)
+    def test_app_notice_manage_insert_test(self, title, content, success):
         self.panm.app_notice_manage_insert(title, content)
-        print(self.panm.page_app_notice_manage_insert_content_hint)
-        title=self.panm.page_app_notice_manage_insert_title_hint()
-        content=self.panm.page_app_notice_manage_insert_content_hint()
-        type=self.panm.page_app_notice_manage_insert_type_hint()
-        if title=="不能大于50个字符" and content=="不能大于255个字符":
-            self.panm.base_back()
-        elif title=="请输入公告标题" and content=="请输入公告内容" and type=="请输入公告类型":
-            self.panm.base_back()
-        else:
-            pass
+        if success:  # 走True
+            try:
+                # 断言新增app公告主题不存在,表示该用例执行通过,存在就表示异常
+                # self.panm.page_app_notice_manage_insert_title_text()    这一行是表示新增app公告主题存在的意思
+                self.assertFalse(self.panm.page_app_notice_manage_insert_title_text())  # 断言不存在
+
+                # 通过用例,这个怎么写
+            except:
+                self.panm.base_get_image()
+        else:  # 走False
+            # try:
+            #     self.assertEqual(self.panm.page_app_notice_manage_insert_title_hint(),"请输入公告标题") or
+            # except Exception as Error:
+            #     print(Error)
+            # else:
+            # print(self.panm.page_app_notice_manage_insert_title_hint())
+            try:
+                self.assertTrue(self.panm.page_app_notice_manage_insert_title_hint()) or self.assertTrue(
+                    self.panm.page_app_notice_manage_insert_content_hint())
+                self.panm.page_app_notice_manage_insert_cancel()
+            except AssertionError as error:
+                print(error)
+            # else:
+            #     time.sleep(10)
+
+
     # # 测试查询
     # @pytest.mark.run(order=2)
     # @allure.step(title="App公告管理查询")

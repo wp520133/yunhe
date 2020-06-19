@@ -10,7 +10,7 @@ class TestDeptManage(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = GetDriver().get_driver()
         cls.pd = PageDeptManage(cls.driver)
-        cls.pd.system_login("admin", 123456)
+        cls.pd.system_login()
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -19,7 +19,6 @@ class TestDeptManage(unittest.TestCase):
     # 测试部门管理新增
     def test_dept_manage_insert(self):
         self.pd.dept_manage_insert()
-
 
     # 测试部门管理编辑
     def test_dept_manage_edit(self):

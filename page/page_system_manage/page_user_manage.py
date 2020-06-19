@@ -11,7 +11,12 @@ class TestPageUserManage(Base):
     # 输入用户名
     def page_user_manage_input_username(self):
         self.base_input(page.public_username_input, page.public_value)
-
+    # 判断用户名提示语是否存在
+    def page_user_manage_input_is_username(self):
+        self.base_element_is_exist(page.user_manage_insert_username_title)
+    # 点击返回
+    def page_user_manage_insert_return_button(self):
+        self.base_click(page.user_manage_insert_return_button)
     # 点击状态
     def page_user_manage_click_status(self):
         self.base_click(page.user_manage_status_click)
@@ -52,17 +57,20 @@ class TestPageUserManage(Base):
     def page_user_manage_insert(self):
         self.base_click(page.user_manage_insert_click)
 
+    # 判断是否新增
+    def page_user_manage_is_insert(self):
+        self.base_element_is_exist(page.user_manage_insert_click)
     # 输入用户名
-    def page_user_manage_insert_username(self):
-        self.base_input(page.public_username_input, page.public_value)
+    def page_user_manage_insert_username(self,username):
+        self.base_input(page.public_username_input, username)
 
     # 输入新密码
-    def page_user_manage_insert_new_password(self):
-        self.base_input(page.public_password_input, page.publicPassword)
+    def page_user_manage_insert_new_password(self, password):
+        self.base_input(page.public_password_input, password)
 
     # 输入确认密码
-    def page_user_manage_insert_confirm_password(self):
-        self.base_input(page.public_confirm_input, page.publicPassword)
+    def page_user_manage_insert_confirm_password(self, sure_password):
+        self.base_input(page.public_confirm_input, sure_password)
 
     # 点击角色
     def page_user_manage_insert_click_role(self):
@@ -116,11 +124,11 @@ class TestPageUserManage(Base):
         time.sleep(2)
 
     # 组装用户管理新增
-    def user_manage_insert(self):
+    def user_manage_insert(self,username,password,sure_password):
         self.page_user_manage_insert()
-        self.page_user_manage_insert_username()
-        self.page_user_manage_insert_new_password()
-        self.page_user_manage_insert_confirm_password()
+        self.page_user_manage_insert_username(username)
+        self.page_user_manage_insert_new_password(password)
+        self.page_user_manage_insert_confirm_password(sure_password)
         self.page_user_manage_insert_click_role()
         self.page_user_manage_insert_select_role()
         self.page_user_manage_click_username()
@@ -131,18 +139,18 @@ class TestPageUserManage(Base):
         time.sleep(2)
 
     # 组装用户管理编辑(通过新增、查询、编辑)
-    def user_manage_edit(self):
-        self.user_manage_insert()
+    def user_manage_edit(self,username,password,sure_password):
+        self.user_manage_insert(username,password,sure_password)
         self.user_manage_search()
         self.page_user_manage_edit_button()
-        self.page_user_manage_insert_new_password()
-        self.page_user_manage_insert_confirm_password()
+        self.page_user_manage_insert_new_password(password)
+        self.page_user_manage_insert_confirm_password(sure_password)
         self.page_user_manage_save_button()
         time.sleep(2)
 
     # 组装用户管理的禁用(通过新增、查询、禁用)
-    def user_manage_ban(self):
-        self.user_manage_insert()
+    def user_manage_ban(self,username,password,sure_password):
+        self.user_manage_insert(username,password,sure_password)
         self.user_manage_search()
         self.page_user_manage_ban()
         self.page_user_manage_sure_ban()

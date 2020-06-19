@@ -195,6 +195,10 @@ system_manage_click=By.CSS_SELECTOR,"#root ul:first-child>li>ul>li:first-child>d
 user_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
 # 输入用户名
 user_manage_insert_username_input=By.ID, "username"
+# 用户名提示语
+user_manage_insert_username_title=By.CSS_SELECTOR,"div.ant-row:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2)"
+# 点击返回
+user_manage_insert_return_button=By.CSS_SELECTOR,".ant-btn-link"
 # 输入新密码
 user_manage_insert_password_input=By.ID, "password"
 # 输入确认密码
@@ -1965,6 +1969,11 @@ app_notice_manage_insert_type_hint=By.CSS_SELECTOR,"div.ant-row:nth-child(3) > d
 # 点击确定(公有)
 # 撤销(x)
 app_notice_manage_insert_cross=By.CSS_SELECTOR,"body>div:last-child>div>div>div>div:nth-child(2)>button>span"
+# 点击取消
+app_notice_manage_insert_cancel=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(1)"
+
+# 新增app公告栏(用于判断该元素是否存在,存在表示新增失败)
+app_notice_manage_insert_head_text=By.CSS_SELECTOR,"#rcDialogTitle17"
 """
     app公告管理查询
 """

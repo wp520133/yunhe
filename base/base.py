@@ -55,24 +55,21 @@ class Base:
     def base_back(self):
         self.driver.back()
 
-    # 判断查找元素是否成功,成功返回true,失败返回false
-    def base_if_success(self, loc):
+    # 判断元素是否存在,存在返回True,不存在返回False
+    def base_element_is_exist(self, loc):
         try:
             self.base_find_element(loc, timeout=2)
             return True
         except:
             return False
 
-
+    # 文件上传
+    def base_upload(self):
+        os.system(r"C:\其他\file\name.exe")
 
     """
         系统管理登录
     """
-
-    # 文件上传
-
-    def base_upload(self):
-        os.system(r"C:\其他\file\name.exe")
 
     # 输入系统登录用户名
     def system_manage_input_username(self, username):
