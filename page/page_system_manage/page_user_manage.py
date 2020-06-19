@@ -11,12 +11,15 @@ class TestPageUserManage(Base):
     # 输入用户名
     def page_user_manage_input_username(self):
         self.base_input(page.public_username_input, page.public_value)
+
     # 判断用户名提示语是否存在
     def page_user_manage_input_is_username(self):
         self.base_element_is_exist(page.user_manage_insert_username_title)
+
     # 点击返回
     def page_user_manage_insert_return_button(self):
         self.base_click(page.user_manage_insert_return_button)
+
     # 点击状态
     def page_user_manage_click_status(self):
         self.base_click(page.user_manage_status_click)
@@ -60,8 +63,13 @@ class TestPageUserManage(Base):
     # 判断是否新增
     def page_user_manage_is_insert(self):
         self.base_element_is_exist(page.user_manage_insert_click)
+
     # 输入用户名
-    def page_user_manage_insert_username(self,username):
+    def page_user_manage_insert_username(self, username):
+        self.base_input(page.public_username_input, username)
+
+    # 禁用操作,输入用户名
+    def page_user_manage_insert_username_disable(self, username):
         self.base_input(page.public_username_input, username)
 
     # 输入新密码
@@ -105,13 +113,21 @@ class TestPageUserManage(Base):
     """
 
     def page_user_manage_edit_button(self):
-        self.base_click(page.public_one_row_button)
+        self.base_click(page.user_manage_ban_edit_click)
 
     # 组装业务方法
 
     # 组装用户管理查询
     def user_manage_search(self):
         self.page_user_manage_input_username()
+        self.page_user_manage_click_status()
+        self.page_user_manage_select_status()
+        self.page_user_manage_search()
+        time.sleep(2)
+
+    # 操作禁用时,查询
+    def user_manage_search_disable(self, username):
+        self.page_user_manage_insert_username_disable(username)
         self.page_user_manage_click_status()
         self.page_user_manage_select_status()
         self.page_user_manage_search()
@@ -124,7 +140,7 @@ class TestPageUserManage(Base):
         time.sleep(2)
 
     # 组装用户管理新增
-    def user_manage_insert(self,username,password,sure_password):
+    def user_manage_insert(self, username, password, sure_password):
         self.page_user_manage_insert()
         self.page_user_manage_insert_username(username)
         self.page_user_manage_insert_new_password(password)
@@ -138,9 +154,24 @@ class TestPageUserManage(Base):
         self.page_user_manage_save_button()
         time.sleep(2)
 
+    # 操作禁用时,输入用户名
+    def user_manage_insert_disable(self, username, password, sure_password):
+        self.page_user_manage_insert()
+        self.page_user_manage_insert_username_disable(username)
+        self.page_user_manage_insert_new_password(password)
+        self.page_user_manage_insert_confirm_password(sure_password)
+        self.page_user_manage_insert_click_role()
+        self.page_user_manage_insert_select_role()
+        self.page_user_manage_click_username()
+        self.page_user_manage_insert_rv_icon()
+        self.page_user_manage_insert_rv_radio()
+        self.page_user_manage_insert_sure_button()
+        self.page_user_manage_save_button()
+        time.sleep(2)
+
     # 组装用户管理编辑(通过新增、查询、编辑)
-    def user_manage_edit(self,username,password,sure_password):
-        self.user_manage_insert(username,password,sure_password)
+    def user_manage_edit(self, username, password, sure_password):
+        self.user_manage_insert(username, password, sure_password)
         self.user_manage_search()
         self.page_user_manage_edit_button()
         self.page_user_manage_insert_new_password(password)
@@ -149,9 +180,9 @@ class TestPageUserManage(Base):
         time.sleep(2)
 
     # 组装用户管理的禁用(通过新增、查询、禁用)
-    def user_manage_ban(self,username,password,sure_password):
-        self.user_manage_insert(username,password,sure_password)
-        self.user_manage_search()
+    def user_manage_ban(self, username, password, sure_password):
+        self.user_manage_insert_disable(username, password, sure_password)
+        self.user_manage_search_disable(username)
         self.page_user_manage_ban()
         self.page_user_manage_sure_ban()
         time.sleep(2)

@@ -17,25 +17,28 @@ class PageRoleManage(Base):
         self.base_click(page.role_manage_insert_click_button)
 
     # 角色名称输入
-    def page_role_manage_input_role_name(self):
-        self.base_input(page.public_role_name_input, page.public_value)
+    def page_role_manage_input_role_name(self, rolename):
+        self.base_input(page.public_role_name_input, rolename)
 
     # 角色名称编辑输入
     def page_role_manage_edit_input_role_name(self):
         self.base_input(page.public_role_name_input, page.public_value2)
 
     # 角色标识输入
-    def page_role_manage_input_role_code(self):
-        self.base_input(page.public_role_code_input, page.public_value)
+    def page_role_manage_input_role_code(self, rolecode):
+        self.base_input(page.public_role_code_input, rolecode)
 
     # 角色描述输入
-    def page_role_manage_input_role_desc(self):
-        self.base_input(page.public_role_desc_input, page.public_value)
+    def page_role_manage_input_role_desc(self, roledesc):
+        self.base_input(page.public_role_desc_input, roledesc)
 
     # 角色保存
     def page_role_manage_input_role_save(self):
         self.base_click(page.public_insert_save_button)
 
+    # 点击返回
+    def page_role_manage_input_return(self):
+        self.base_click(page.role_manage_insert_click_return)
     """
         角色管理查看
     """
@@ -78,12 +81,12 @@ class PageRoleManage(Base):
 
     # 组装业务方法
     # 测试角色新增
-    def role_manage_insert(self):
+    def role_manage_insert(self, rolename, rolecode, roledesc):
         self.page_role_manage_click_button()
         self.page_role_manage_click_insert()
-        self.page_role_manage_input_role_name()
-        self.page_role_manage_input_role_code()
-        self.page_role_manage_input_role_desc()
+        self.page_role_manage_input_role_name(rolename)
+        self.page_role_manage_input_role_code(rolecode)
+        self.page_role_manage_input_role_desc(roledesc)
         self.page_role_manage_input_role_save()
         time.sleep(2)
 
@@ -91,7 +94,7 @@ class PageRoleManage(Base):
     def role_manage_watch(self):
         self.page_role_manage_click_button()
         self.page_role_manage_click_watch()
-        self.page_role_manage_refresh_watch()
+        self.page_role_manage_cross()
         time.sleep(2)
 
     # 测试角色权限
@@ -108,6 +111,6 @@ class PageRoleManage(Base):
         self.page_role_manage_click_button()
         self.page_role_manage_edit_button()
         self.page_role_manage_edit_input_role_name()
-        self.page_role_manage_input_role_desc()
+        self.page_role_manage_input_role_desc(roledesc="ads")
         self.page_role_manage_input_role_save()
         time.sleep(2)

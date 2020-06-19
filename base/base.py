@@ -87,6 +87,6 @@ class Base:
 
     def system_login(self):
         self.system_manage_input_username("dym6")
-        self.system_manage_input_password(123456)
+        self.system_manage_input_password("123456")
         self.system_manage_login_button()
         time.sleep(2)

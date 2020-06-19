@@ -192,7 +192,7 @@ system_manage_click=By.CSS_SELECTOR,"#root ul:first-child>li>ul>li:first-child>d
     用户管理新增
 """
 # 点击新增按钮
-user_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+user_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__Aslho > div:nth-child(2) > button:nth-child(1)"
 # 输入用户名
 user_manage_insert_username_input=By.ID, "username"
 # 用户名提示语
@@ -239,13 +239,14 @@ user_manage_ban_button = By.CSS_SELECTOR, "button.ant-btn:nth-child(3)"
 user_manage_ban_sure_button = By.CSS_SELECTOR, ".ant-modal-confirm-btns > button:nth-child(2)"
 
 # 系统管理→用户管理编辑(公有)
-
+user_manage_ban_edit_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(1)"
 # 系统管理→角色管理新增(公有)
 
 # 系统管理→点击角色管理
 role_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(2) > span:nth-child(2)"
 # 系统管理→点击新增按钮
 role_manage_insert_click_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(1)"
+role_manage_insert_click_return=By.CSS_SELECTOR,".ant-btn-link"
 # 系统管理→角色管理查看(公有)
 # 系统管理→角色管理编辑(公有)
 
