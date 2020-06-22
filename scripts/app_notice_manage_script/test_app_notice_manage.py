@@ -36,31 +36,7 @@ class TestDeptManage(unittest.TestCase):
     # @pytest.mark.run(order=2)
     def test_app_notice_manage_insert_test(self, title, content, success):
         self.panm.app_notice_manage_insert(title, content)
-        if success:  # 走True
-            try:
-                # 断言新增app公告主题不存在,表示该用例执行通过,存在就表示异常
-                # self.panm.page_app_notice_manage_insert_title_text()    这一行是表示新增app公告主题存在的意思
-                self.assertFalse(self.panm.page_app_notice_manage_insert_title_text())  # 断言不存在
-
-                # 通过用例,这个怎么写
-            except:
-                self.panm.base_get_image()
-        else:  # 走False
-            # try:
-            #     self.assertEqual(self.panm.page_app_notice_manage_insert_title_hint(),"请输入公告标题") or
-            # except Exception as Error:
-            #     print(Error)
-            # else:
-            # print(self.panm.page_app_notice_manage_insert_title_hint())
-            try:
-                self.assertTrue(self.panm.page_app_notice_manage_insert_title_hint()) or self.assertTrue(
-                    self.panm.page_app_notice_manage_insert_content_hint())
-                self.panm.page_app_notice_manage_insert_cancel()
-            except AssertionError as error:
-                print(error)
-            # else:
-            #     time.sleep(10)
-
+        
 
     # # 测试查询
     # @pytest.mark.run(order=2)
