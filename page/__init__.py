@@ -213,6 +213,9 @@ user_manage_insert_rv_icon = By.CSS_SELECTOR, ".anticon-user"
 user_manage_insert_rv_radio=By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
 # 点击确定
 user_manage_insert_rv_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 新增用户文字定位
+user_manage_insert_user_text=By.CSS_SELECTOR,".style_title__aXSsW > span:nth-child(3)"
+
 """
     用户管理查询
 """

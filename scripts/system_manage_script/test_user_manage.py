@@ -7,6 +7,7 @@ from base.get_driver import GetDriver
 import pytest
 import page
 import allure
+import time
 
 
 class TestUserManage(unittest.TestCase):
@@ -27,12 +28,13 @@ class TestUserManage(unittest.TestCase):
     @parameterized.expand(read_txt("system_manage/system_user.txt"))
     @allure.step(title="用户管理新增参数化(等价类边界值)")
     @pytest.mark.run(order=1)
-    def test_user_manage_insert(self, username, password, sure_password):
+    def test_user_manage_insert(self, username, password, sure_password, success):
         self.um.user_manage_insert(username, password, sure_password)
-        try:
-            self.um.page_user_manage_insert_return_button()
-        except:
-            self.um.base_get_image()
+        if success:
+            try:
+                self.um.page_user_manage_insert_return_button()
+            except:
+                self.um.base_get_image()
 
     # 测试用户管理新增、查询、编辑
     @allure.step(title="用户管理的新增到编辑")

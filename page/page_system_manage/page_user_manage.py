@@ -12,10 +12,6 @@ class TestPageUserManage(Base):
     def page_user_manage_input_username(self):
         self.base_input(page.public_username_input, page.public_value)
 
-    # 判断用户名提示语是否存在
-    def page_user_manage_input_is_username(self):
-        self.base_element_is_exist(page.user_manage_insert_username_title)
-
     # 点击返回
     def page_user_manage_insert_return_button(self):
         self.base_click(page.user_manage_insert_return_button)
@@ -60,10 +56,6 @@ class TestPageUserManage(Base):
     def page_user_manage_insert(self):
         self.base_click(page.user_manage_insert_click)
 
-    # 判断是否新增
-    def page_user_manage_is_insert(self):
-        self.base_element_is_exist(page.user_manage_insert_click)
-
     # 输入用户名
     def page_user_manage_insert_username(self, username):
         self.base_input(page.public_username_input, username)
@@ -107,6 +99,10 @@ class TestPageUserManage(Base):
     # 点击保存
     def page_user_manage_save_button(self):
         self.base_click(page.public_insert_save_button)
+
+    # 判断新增用户文字是否存在
+    def page_user_manage_insert_user_text_exist(self):
+        self.base_element_is_exist(page.user_manage_insert_user_text)
 
     """
         系统管理→用户管理的编辑
