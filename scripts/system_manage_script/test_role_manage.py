@@ -39,7 +39,7 @@ class TestRoleManage(unittest.TestCase):
             self.pm.base_get_image()
 
     # 测试角色管理查看
-    @allure.step(title="解决管理常看")
+    @allure.step(title="角色管理查看")
     @pytest.mark.run(order=3)
     def test_role_manage_watch(self):
         self.pm.role_manage_watch()

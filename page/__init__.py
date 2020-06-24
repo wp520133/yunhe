@@ -268,7 +268,8 @@ dept_manage_click_insert_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-c
 dept_manage_click_insert_parent_click = By.CSS_SELECTOR, ".ant-select-selection"
 # 选择父级节点
 dept_manage_click_insert_parent_select = By.CSS_SELECTOR, ".ant-select-tree > li:nth-child(1) > span:nth-of-type(2)"
-
+# 点击返回
+dept_manage_click_insert_return=By.CSS_SELECTOR,".ant-btn-link"
 # 系统管理→部门管理编辑
 dept_manage_click_edit_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(2)"
 

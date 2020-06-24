@@ -1341,3 +1341,14 @@ JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILUR
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
 libpng warning: iCCP: cHRM chunk does not match sRGB
+1592966337036	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\17327\\AppData\\Local\\Temp\\rust_mozprofile2ASwb2"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1592966341217	Marionette	INFO	Listening on port 59201
+1592966341256	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 203: NS_ERROR_FAILURE: Should pass a non-null uri
+1592966422906	Marionette	INFO	Stopped listening on port 59201
+JavaScript error: resource://gre/modules/IndexedDB.jsm, line 370: UnknownError: IDBDatabase.transaction: Can't start IndexedDB transaction during shutdown
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+libpng warning: iCCP: cHRM chunk does not match sRGB
