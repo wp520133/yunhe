@@ -44,6 +44,10 @@ class PageNumDictManage(Base):
     # 点击保存
     def page_num_dict_manage_insert_save_button(self):
         self.base_click(page.public_insert_save_button)
+
+    # 点击返回
+    def page_num_dict_manage_insert_return_button(self):
+        self.base_click(page.num_dict_manage_insert_return_button)
     
     """
         数字字典管理修改
@@ -89,6 +93,8 @@ class PageNumDictManage(Base):
     def page_num_dict_manage_four_line_insert_button(self):
         self.base_click(page.public_insert_save_button)
 
+    def page_num_dict_manage_four_insert_return_button(self):
+        self.base_click(page.num_dict_manage_insert_four_return_button)
     """
         字典项四行编辑
     """

@@ -18,7 +18,7 @@ class PageSystemClassManage(Base):
 
     # 点击新增
     def page_system_class_manage_insert_click(self):
-        self.base_click(page.public_insert_button)
+        self.base_click(page.system_class_insert_manage_click)
 
     # 点击上级系统类别
     def page_system_class_manage_super_system_class_click(self):
@@ -29,17 +29,20 @@ class PageSystemClassManage(Base):
         self.base_click(page.system_class_manage_super_system_class_select)
 
     # 输入系统类别名称
-    def page_system_class_manage_system_class_name_input(self):
-        self.base_input(page.public_name_input, page.public_value)
+    def page_system_class_manage_system_class_name_input(self,system_class):
+        self.base_input(page.public_name_input, system_class)
 
     # 输入描述
-    def page_system_class_manage_desc_input(self):
-        self.base_input(page.public_desc_input, page.public_value)
+    def page_system_class_manage_desc_input(self,desc):
+        self.base_input(page.public_desc_input, desc)
 
     # 点击保存
     def page_system_class_manage_insert_save(self):
         self.base_click(page.public_insert_save_button)
 
+    # 点击返回
+    def page_system_class_manage_return_button(self):
+        self.base_click(page.system_class_manage_return_button)
     """
         系统类别管理查询
     """
@@ -75,16 +78,20 @@ class PageSystemClassManage(Base):
     """
         组合业务方法
     """
-
-    # 新增
-    def system_class_manage_insert(self):
+    # 点击系统管理
+    def system_class_manage_click(self):
         self.page_base_info_manage_click()
         self.page_system_class_manage_click()
+        time.sleep(2)
+    # 新增
+    def system_class_manage_insert(self,system_class,desc):
+        # self.page_base_info_manage_click()
+        # self.page_system_class_manage_click()
         self.page_system_class_manage_insert_click()
         self.page_system_class_manage_super_system_class_click()
         self.page_system_class_manage_super_system_class_select()
-        self.page_system_class_manage_system_class_name_input()
-        self.page_system_class_manage_desc_input()
+        self.page_system_class_manage_system_class_name_input(system_class)
+        self.page_system_class_manage_desc_input(desc)
         self.page_system_class_manage_insert_save()
         time.sleep(2)
 
@@ -96,12 +103,12 @@ class PageSystemClassManage(Base):
         time.sleep(2)
 
     # 编辑(从新增到查询再到编辑)
-    def system_class_manage_edit(self):
-        self.system_class_manage_insert()
+    def system_class_manage_edit(self,system_class,desc):
+        self.system_class_manage_insert(system_class,desc)
         self.system_class_manage_search()
         self.page_system_class_manage_edit_button()
-        self.page_system_class_manage_system_class_name_input()
-        self.page_system_class_manage_desc_input()
+        self.page_system_class_manage_system_class_name_input(system_class)
+        self.page_system_class_manage_desc_input(desc)
         self.page_system_class_manage_insert_save()
         time.sleep(2)
 

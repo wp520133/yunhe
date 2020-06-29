@@ -39,18 +39,22 @@ class PageUnitsManage(Base):
     # 点击所属部件型号
     def page_units_manage_units_type_click(self):
         self.base_click(page.units_manage_units_type_click)
-
+        # self.base_click_enter(page.units_manage_units_type_click)
     # 选择所属部件型号
     def page_units_manage_units_type_select(self):
-        self.base_click(page.units_manage_units_type_select)
+        # self.base_click(page.units_manage_units_type_select)
+        # self.base_click_enter(page.units_manage_units_type_click)
+        # self.base_click_down(page.units_manage_units_type_select)
+        # self.base_click_enter(page.units_manage_units_type_select)
+        self.base_click_enter(page.units_manage_units_type_click)
 
     # 输入部件名称
-    def page_units_manage_units_name_input(self):
-        self.base_input(page.public_name_input, page.public_value)
+    def page_units_manage_units_name_input(self, units_name):
+        self.base_input(page.public_name_input, units_name)
 
     # 输入序列号
-    def page_units_manage_sn_input(self):
-        self.base_input(page.public_sn_input, page.public_order_num)
+    def page_units_manage_sn_input(self, sn):
+        self.base_input(page.public_sn_input, sn)
 
     # 点击生产日期
     def page_units_manage_pd_time_click(self):
@@ -77,16 +81,20 @@ class PageUnitsManage(Base):
         self.base_click(page.units_manage_gt_time_select)
 
     # 输入备注
-    def page_units_manage_remark_input(self):
-        self.base_input(page.public_remark_input, page.public_value)
+    def page_units_manage_remark_input(self, remark):
+        self.base_input(page.public_remark_input, remark)
 
     # 输入描述
-    def page_units_manage_desc_input(self):
-        self.base_input(page.public_desc_input, page.public_value)
+    def page_units_manage_desc_input(self, desc):
+        self.base_input(page.public_desc_input, desc)
 
     # 点击保存
     def page_units_manage_save(self):
         self.base_click(page.public_insert_save_button)
+
+    # 点击返回
+    def page_units_manage_return_click(self):
+        self.base_click(page.public_return_click)
 
     """
         部件管理查询
@@ -136,10 +144,14 @@ class PageUnitsManage(Base):
         组装业务方法
     """
 
-    # 新增
-    def units_manage_insert(self):
+    # 部件管理点击
+    def units_manage_click(self):
         self.page_base_info_manage_click()
         self.page_units_manage_click()
+        time.sleep(2)
+
+    # 新增
+    def units_manage_insert(self, units_name, sn, remark, desc):
         self.page_units_manage_insert_click()
         self.page_units_manage_system_class_click()
         self.page_units_manage_system_class_select()
@@ -147,16 +159,16 @@ class PageUnitsManage(Base):
         self.page_units_manage_units_class_select()
         self.page_units_manage_units_type_click()
         self.page_units_manage_units_type_select()
-        self.page_units_manage_units_name_input()
-        self.page_units_manage_sn_input()
+        self.page_units_manage_units_name_input(units_name)
+        self.page_units_manage_sn_input(sn)
         self.page_units_manage_pd_time_click()
         self.page_units_manage_pd_time_select()
         self.page_units_manage_sp_time_click()
         self.page_units_manage_sp_time_select()
         self.page_units_manage_gt_time_click()
         self.page_units_manage_gt_time_select()
-        self.page_units_manage_remark_input()
-        self.page_units_manage_desc_input()
+        self.page_units_manage_remark_input(remark)
+        self.page_units_manage_desc_input(desc)
         self.page_units_manage_save()
         time.sleep(2)
 
@@ -168,20 +180,20 @@ class PageUnitsManage(Base):
         time.sleep(2)
 
     # 编辑
-    def units_manage_edit(self):
-        self.units_manage_insert()
+    def units_manage_edit(self, units_name, sn, remark, desc):
+        self.units_manage_insert(units_name, sn, remark, desc)
         self.units_manage_search()
         self.page_units_manage_edit_button()
-        self.page_units_manage_units_name_input()
-        self.page_units_manage_sn_input()
+        self.page_units_manage_units_name_input(units_name)
+        self.page_units_manage_sn_input(sn)
         self.page_units_manage_pd_time_click()
         self.page_units_manage_pd_time_select()
         self.page_units_manage_sp_time_click()
         self.page_units_manage_sp_time_select()
         self.page_units_manage_gt_time_click()
         self.page_units_manage_gt_time_select()
-        self.page_units_manage_remark_input()
-        self.page_units_manage_desc_input()
+        self.page_units_manage_remark_input(remark)
+        self.page_units_manage_desc_input(desc)
         self.page_units_manage_save()
         time.sleep(2)
 

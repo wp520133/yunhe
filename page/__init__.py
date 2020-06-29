@@ -10,7 +10,7 @@ value_51=r'([a-zA-Z]{51,53})'
 value_256=r'([a-zA-Z]{256,257})'
 password = r'(^\d{6,9}$)'
 lindlinephone= r'(^0\d{2,3}-\d{7,8}$)'
-order = r'(^\d{1,2}$)'
+order = r'(^\d{2,3}$)'
 moilePhone = r'(^1[3|5|7|8]\d{9}$)'
 email=r'([1-9]\d{7,10}@qq\.com)'
 idCardNo=r'(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)'
@@ -58,7 +58,7 @@ public_sure_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > bu
 # 公共的输入数量
 public_num_input = By.ID, "spareNum[0]"
 # 公共的添加按钮
-public_insert_button = By.CSS_SELECTOR, ".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+public_insert_button = By.CSS_SELECTOR, ".style_titleGroup__Aslho > div:nth-child(2) > button:nth-child(1)"
 # 公共的操作1列按钮
 public_one_row_button = By.CSS_SELECTOR, "button.ant-btn-link:nth-child(1)"
 # 公共的操作3列按钮
@@ -111,7 +111,7 @@ public_sort_input = By.ID, "sort"
 # 公有的创建人
 public_createBy_input=By.ID,"createBy"
 # 公有的创建人value
-public_createBy="admin"
+public_createBy="dym6"
 # 公有的重置按钮
 public_reset_button = By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
 # 公有的操作2列
@@ -167,7 +167,8 @@ public_part_unit_input=By.ID,"purchasingPriceUnit[0]"
 public_apprival_device_input=By.CSS_SELECTOR,"#auditOpinion"
 # 点击通过
 public_apprival_through_button=By.CSS_SELECTOR,"form.ant-form:nth-child(8) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > div:nth-child(1) > button:nth-child(2)"
-
+# 公共的返回
+public_return_click=By.CSS_SELECTOR,".ant-btn-link"
 ########################################################################################################################
 """
     系统登录
@@ -192,7 +193,7 @@ system_manage_click=By.CSS_SELECTOR,"#root ul:first-child>li>ul>li:first-child>d
     用户管理新增
 """
 # 点击新增按钮
-user_manage_insert_click=By.CSS_SELECTOR,".style_titleGroup__Aslho > div:nth-child(2) > button:nth-child(1)"
+user_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 输入用户名
 user_manage_insert_username_input=By.ID, "username"
 # 用户名提示语
@@ -248,7 +249,7 @@ user_manage_ban_edit_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > t
 # 系统管理→点击角色管理
 role_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(2) > span:nth-child(2)"
 # 系统管理→点击新增按钮
-role_manage_insert_click_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(1)"
+role_manage_insert_click_button = By.CSS_SELECTOR, "#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 role_manage_insert_click_return=By.CSS_SELECTOR,".ant-btn-link"
 # 系统管理→角色管理查看(公有)
 # 系统管理→角色管理编辑(公有)
@@ -263,7 +264,7 @@ role_manage_power_save_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-ch
 # 点击部门管理
 dept_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(4) > span:nth-child(2)"
 # 点击新增
-dept_manage_click_insert_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(1)"
+dept_manage_click_insert_button = By.CSS_SELECTOR, "#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击父级节点
 dept_manage_click_insert_parent_click = By.CSS_SELECTOR, ".ant-select-selection"
 # 选择父级节点
@@ -277,7 +278,7 @@ dept_manage_click_edit_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) 
 # 点击数字字典管理
 num_dict_manage_click_button = By.CSS_SELECTOR, "li.ant-menu-item:nth-child(5) > span:nth-child(2)"
 # 数字字典管理→新增
-num_dict_manage_insert_click_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(1)"
+num_dict_manage_insert_click_button = By.CSS_SELECTOR, "#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 数字字典管理→输入描述(公有)
 # 数字字典管理→点击是否系统字典
 num_dict_manage_insert_isno_dict_click = By.CSS_SELECTOR, ".ant-select-selection"
@@ -286,6 +287,7 @@ num_dict_manage_insert_isno_dict_select = By.CSS_SELECTOR, "li.ant-select-dropdo
 # 数字字典管理→输入类型(公有)
 # 数字字典管理→输入备注信息(公有)
 # 数字字典管理→点击保存(公有)
+num_dict_manage_insert_return_button=By.CSS_SELECTOR,".ant-btn-link"
 # 数字字典管理修改
 # 点击四行修改
 num_dict_manage_four_line_edit_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(1)"
@@ -294,13 +296,14 @@ num_dict_manage_four_line_edit_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-c
 num_dict_manage_four_line_dict_nape_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(2)"
 # 字典项新增
 # 点击字典项新增
-num_dict_manage_four_line_dict_nape_insert_button = By.CSS_SELECTOR, "button.ant-btn-primary:nth-child(1)"
+num_dict_manage_four_line_dict_nape_insert_button = By.CSS_SELECTOR, "#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 输入数据值(公有)
 # 输入标签名(公有)
 # 输入描述(公有)
 # 输入排序(公有)
 # 输入备注信息(公有)
 # 点击保存(公有)
+num_dict_manage_insert_four_return_button=By.CSS_SELECTOR,".ant-btn-link"
 # 字典项四行编辑
 # 点击编辑
 num_dict_manage_four_line_dict_nape_edit_button = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(7) > div:nth-child(1) > button:nth-child(1)"
@@ -317,6 +320,7 @@ system_class_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>
     系统类别管理新增
 """
 # 点击新增(公有)
+system_class_insert_manage_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击上级系统类别
 system_class_manage_super_system_class_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择上级系统类别
@@ -324,7 +328,7 @@ system_class_manage_super_system_class_select=By.CSS_SELECTOR,".ant-select-tree-
 # 输入系统类别名称(公有)
 # 输入描述(公有)
 # 点击保存(公有)
-
+system_class_manage_return_button=By.CSS_SELECTOR,".ant-btn-link"
 """
     系统类别管理查询
 """
@@ -349,6 +353,7 @@ system_class_manage_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wra
 # 点击部件类别管理
 units_class_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(2)>ul>li:nth-child(2)"
 # 点击新增(公有)
+units_class_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击所属系统类别
 units_class_manage_insert_belong_system_class_click=By.CSS_SELECTOR,"span.ant-select-selection"
 # 选择所属系统类别
@@ -360,7 +365,7 @@ units_class_manage_insert_super_units_class_select=By.CSS_SELECTOR,"li.ant-selec
 # 输入部件类别名称(公有)
 # 输入描述(公有)
 # 点击保存(公有)
-
+units_class_manage_insert_return_click=By.CSS_SELECTOR,".ant-btn-link"
 """
     部件类别管理查询
 """
@@ -385,6 +390,7 @@ units_class_manage_insert_super_units_class_select=By.CSS_SELECTOR,"li.ant-selec
 # 点击部件型号管理
 units_type_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(2)>ul>li:nth-child(3)"
 # 点击新增按钮(公有)
+units_type_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击所属系统类别
 units_type_manage_system_class_click=By.CSS_SELECTOR,"span.ant-select-selection"
 # 选择所属系统类别
@@ -447,6 +453,7 @@ units_type_manage_appear_time_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
 # 点击部件管理
 units_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(2)>ul>li:nth-child(4)"
 # 点击新增(公有)
+units_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击所属系统类别
 units_manage_system_class_click=By.CSS_SELECTOR,"span.ant-select-selection"
 # 选择所属系统类别
@@ -456,9 +463,9 @@ units_manage_units_class_click=By.CSS_SELECTOR,"#partsCateId > div:nth-child(1)"
 # 选择所属部件类别
 units_manage_units_class_selefct=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
 # 点击所属部件型号
-units_manage_units_type_click=By.CSS_SELECTOR,"#partsTypeId > div:nth-child(1) > div:nth-child(1)"
+units_manage_units_type_click=By.CSS_SELECTOR,"#root>section>section>main>div>section>main>form>div:nth-child(3)>div:nth-child(2)>div>span>div>div"
 # 选择所属部件型号
-units_manage_units_type_select=By.CSS_SELECTOR,"body>div:nth-of-type(2) ul>li:nth-of-type(2)"
+# units_manage_units_type_select=By.CSS_SELECTOR,"body>div:nth-of-type(2)>div>div>div>ul>li:nth-child(1)"
 # 输入部件名称(公有)
 # 输入序列号(公有)
 # 点击生产日期
@@ -509,6 +516,7 @@ units_manage_gt_time_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
 # 点击备件管理
 repair_class_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(2)>ul>li:nth-child(5)"
 # 点击新增(公有)
+repair_class_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击上级备件类别
 repair_class_manage_super_repair_class_click=By.CSS_SELECTOR,".ant-select-selection__placeholder"
 # 选择上级备件类别
@@ -543,6 +551,7 @@ repair_class_manage_super_repair_class_select=By.CSS_SELECTOR,"li.ant-select-tre
 # 点击备件型号管理
 repair_type_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(2)>ul>li:nth-child(6)"
 # 点击新增(公有)
+repair_type_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击所属备件类别
 repair_type_manage_repair_type_click=By.CSS_SELECTOR,"span.ant-select-selection__placeholder"
 # 选择所属备件类别
@@ -620,7 +629,7 @@ put_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li
 # 点击我的入库单
 mine_put_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>ul>li>ul>li:nth-child(3)>ul>li>ul>li:nth-child(1)"
 # 点击新增
-public_put_bill_insert_click=By.CSS_SELECTOR,".style_titleGroup__3gG29 > div:nth-child(2) > button:nth-child(1)"
+public_put_bill_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 输入入库单名称
 public_put_bill_name_input=By.ID,"name"
 # 点击类型
@@ -651,7 +660,7 @@ wait_approval_put_bill_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-ch
 # 点击状态
 public_put_bill_status_click=By.CSS_SELECTOR,".ant-select-selection"
 # 选择状态
-public_put_bill_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+public_put_bill_status_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
 # 点击查询
 public_put_bill_search_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
 # 点击审批
@@ -695,7 +704,7 @@ put_bill_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div:nth-child(2)>
 # 输入入库单名称
 # 点击状态
 # 选择状态-待审批
-put_bill_manage_part_unit_type_select_approval=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+put_bill_manage_part_unit_type_select_approval=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
 # 选择状态-待入库
 put_bill_manage_part_unit_type_select_put=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(2)"
 # 点击查询
@@ -704,7 +713,7 @@ put_bill_manage_approval_click=By.CSS_SELECTOR,"button.ant-btn-link:nth-child(2)
 # 点击入库
 put_bill_manage_put_click=By.CSS_SELECTOR,"button.ant-btn:nth-child(3)"
 # 点击执行
-put_bill_manage_excute_button=By.CSS_SELECTOR,".detail_detailContainer__3um4P > div:nth-child(7) > button:nth-child(2)"
+put_bill_manage_excute_button=By.CSS_SELECTOR,"body>div:last-child>div>div:nth-child(2)>div>div:nth-child(2)>div:nth-child(3)>div>div:last-child>button:nth-child(2)"
 # 点击查看
 put_bill_manage_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(5)"
 

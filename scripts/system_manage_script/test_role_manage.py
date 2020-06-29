@@ -23,36 +23,37 @@ class TestRoleManage(unittest.TestCase):
 
     # 测试角色管理新增
     @allure.step(title="角色管理新增成功")
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     def test_role_manage_insert(self):
         self.pm.role_manage_insert(page.public_value, page.public_value, page.public_value)
 
     # 测试角色管理异常新增
     @parameterized.expand(read_txt("system_manage/system_role.txt"))
     @allure.step(title="角色管理异常新增,预期失败")
-    @pytest.mark.run(order=2)
-    def test_role_manage_except_insert(self, rolename, rolecode, roledesc):
+    # @pytest.mark.run(order=2)
+    def test_role_manage_except_insert(self, rolename, rolecode, roledesc, success):
         self.pm.role_manage_insert(rolename, rolecode, roledesc)
-        try:
-            self.pm.page_role_manage_input_return()
-        except:
-            self.pm.base_get_image()
+        if success:
+            try:
+                self.pm.page_role_manage_input_return()
+            except:
+                self.pm.base_get_image()
 
     # 测试角色管理查看
     @allure.step(title="角色管理查看")
-    @pytest.mark.run(order=3)
+    # @pytest.mark.run(order=3)
     def test_role_manage_watch(self):
         self.pm.role_manage_watch()
 
     # 测试角色权限
     @allure.step(title="角色管理权限")
-    @pytest.mark.run(order=4)
+    # @pytest.mark.run(order=4)
     def test_role_manage_power(self):
         self.pm.role_manage_power()
 
     # 测试角色编辑
     @allure.step(title="角色管理编辑")
-    @pytest.mark.run(order=5)
+    # @pytest.mark.run(order=5)
     def test_role_manage_edit(self):
         self.pm.role_manage_edit()
 

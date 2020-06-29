@@ -23,7 +23,7 @@ class TestDeptManage(unittest.TestCase):
 
     # 测试部门管理新增
     @allure.step(title="测试部门管理正常数据新增")
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     def test_dept_manage_insert(self):
         self.pd.dept_manage_insert(page.public_value, page.public_password, page.public_value, page.public_value,
                                    page.public_moile_phone, page.public_value, page.public_password)
@@ -31,7 +31,7 @@ class TestDeptManage(unittest.TestCase):
     # 测试部门管理新增异常数据
     @parameterized.expand(read_txt("system_manage/system_dept.txt"))
     @allure.step(title="测试部门管理异常数据新增")
-    @pytest.mark.run(order=2)
+    # @pytest.mark.run(order=2)
     def test_dept_manage_except_insert(self, dept_name, dept_number, desc_duty, line_persion_name, line_phone,
                                        manage_persion_name, order, success):
         self.pd.dept_manage_insert(dept_name, dept_number, desc_duty, line_persion_name, line_phone,
@@ -44,14 +44,14 @@ class TestDeptManage(unittest.TestCase):
 
     # 测试部门管理编辑
     @allure.step(title="测试部门管理正常数据编辑")
-    @pytest.mark.run(order=3)
+    # @pytest.mark.run(order=3)
     def test_dept_manage_edit(self):
         self.pd.dept_manage_edit(page.public_value, page.public_value, page.public_value, page.public_moile_phone,
                                  page.public_value, page.public_password)
 
     # 测试部门管理查看
     @allure.step(title="测试部门管理查看")
-    @pytest.mark.run(order=4)
+    # @pytest.mark.run(order=4)
     def test_dept_manage_watch(self):
         self.pd.dept_manage_watch()
 

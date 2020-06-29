@@ -27,7 +27,7 @@ class TestUserManage(unittest.TestCase):
 
     @parameterized.expand(read_txt("system_manage/system_user.txt"))
     @allure.step(title="用户管理新增参数化(等价类边界值)")
-    @pytest.mark.run(order=1)
+    # @pytest.mark.run(order=1)
     def test_user_manage_insert(self, username, password, sure_password, success):
         self.um.user_manage_insert(username, password, sure_password)
         if success:
@@ -38,19 +38,19 @@ class TestUserManage(unittest.TestCase):
 
     # 测试用户管理新增、查询、编辑
     @allure.step(title="用户管理的新增到编辑")
-    @pytest.mark.run(order=2)
+    # @pytest.mark.run(order=2)
     def test_user_manage_edit(self):
         self.um.user_manage_edit(page.public_value, page.public_password, page.public_password)
 
     # 测试用户管理的重置
     @allure.step(title="用户管理重置")
-    @pytest.mark.run(order=3)
+    # @pytest.mark.run(order=3)
     def test_user_manage_reset(self):
         self.um.user_manage_reset()
 
     # 测试用户管理的禁用
     @allure.step(title="用户管理禁用")
-    @pytest.mark.run(order=4)
+    # @pytest.mark.run(order=4)
     def test_user_manage_ban(self):
         self.um.user_manage_ban(page.public_value2, page.public_password, page.public_password)
 

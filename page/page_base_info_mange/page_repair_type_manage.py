@@ -18,7 +18,7 @@ class PageRepairTypeManage(Base):
 
     # 点击备件型号管理
     def page_repair_type_manage_click(self):
-        self.base_click(page.repair_type_manage_click)
+        self.base_click(page.repair_type_manage_insert_click)
 
     # 点击新增
     def page_page_repair_type_manage_insert_click(self):
@@ -41,20 +41,20 @@ class PageRepairTypeManage(Base):
         self.base_click(page.repair_type_manage_super_repair_type_select)
 
     # 输入备件型号名称
-    def page_repair_type_manage_repair_type_name_input(self):
-        self.base_input(page.public_name_input, page.public_value)
+    def page_repair_type_manage_repair_type_name_input(self, repair_type):
+        self.base_input(page.public_name_input, repair_type)
 
     # 输入计数单位
-    def page_repair_type_manage_cu_input(self):
-        self.base_input(page.public_countUnit_input, page.public_order_num)
+    def page_repair_type_manage_cu_input(self, cu):
+        self.base_input(page.public_countUnit_input, cu)
 
     # 输入采购单价
-    def page_repair_type_manage_price_input(self):
-        self.base_input(page.repair_type_manage_price_input, page.public_order_num)
+    def page_repair_type_manage_price_input(self, price):
+        self.base_input(page.repair_type_manage_price_input, price)
 
     # 输入采购单位
-    def page_repair_type_manage_price_unit(self):
-        self.base_input(page.repair_type_manage_price_unit, page.public_value_num2)
+    def page_repair_type_manage_price_unit(self, price_unit):
+        self.base_input(page.repair_type_manage_price_unit, price_unit)
 
     # 点击厂商名称
     def page_repair_type_manage_shop_name_click(self):
@@ -65,12 +65,12 @@ class PageRepairTypeManage(Base):
         self.base_click(page.repair_type_manage_shop_name_select)
 
     # 输入品牌名
-    def page_repair_type_manage_brand_name_input(self):
-        self.base_input(page.public_brand_name_input, page.public_value)
+    def page_repair_type_manage_brand_name_input(self, brand_name):
+        self.base_input(page.public_brand_name_input, brand_name)
 
     # 输入有效期
-    def page_repair_type_manage_vd_input(self):
-        self.base_input(page.public_effective_time_input, page.public_order_num)
+    def page_repair_type_manage_vd_input(self, vd):
+        self.base_input(page.public_effective_time_input, vd)
 
     # 点击有效单位
     def page_repair_type_manage_eu_click(self):
@@ -81,8 +81,8 @@ class PageRepairTypeManage(Base):
         self.base_click(page.repair_type_manage_eu_select)
 
     # 输入保修期
-    def page_repair_type_guarantee_num_input(self):
-        self.base_input(page.public_guarantee_num_input, page.public_order_num)
+    def page_repair_type_guarantee_num_input(self, guarantee_num):
+        self.base_input(page.public_guarantee_num_input, guarantee_num)
 
     # 点击上市时间
     def page_repair_type_manage_ttm_click(self):
@@ -93,8 +93,8 @@ class PageRepairTypeManage(Base):
         self.base_click(page.repair_type_manage_ttm_select)
 
     # 输入描述
-    def page_repair_type_manage_desc_input(self):
-        self.base_input(page.public_desc_input, page.public_value)
+    def page_repair_type_manage_desc_input(self, desc):
+        self.base_input(page.public_desc_input, desc)
 
     # 点击保存
     def page_repair_type_manage_save_button(self):
@@ -149,29 +149,33 @@ class PageRepairTypeManage(Base):
         组装业务方法
     """
 
-    # 备件管理新增
-    def repair_type_manage_insert(self):
+    # 点击备件型号管理
+    def repair_type_manage_click(self):
         self.page_base_info_manage_click()
         self.page_repair_type_manage_click()
+        time.sleep(2)
+
+    # 备件型号管理新增
+    def repair_type_manage_insert(self, repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc):
         self.page_page_repair_type_manage_insert_click()
         self.page_repair_type_manage_repair_type_click()
         self.page_repair_type_manage_repair_type_select()
         self.page_repair_type_manage_super_repair_type_click()
         self.page_repair_type_manage_super_repair_type_select()
-        self.page_repair_type_manage_repair_type_name_input()
-        self.page_repair_type_manage_cu_input()
-        self.page_repair_type_manage_price_input()
-        self.page_repair_type_manage_price_unit()
+        self.page_repair_type_manage_repair_type_name_input(repair_type)
+        self.page_repair_type_manage_cu_input(cu)
+        self.page_repair_type_manage_price_input(price)
+        self.page_repair_type_manage_price_unit(price_unit)
         self.page_repair_type_manage_shop_name_click()
         self.page_repair_type_manage_shop_name_select()
-        self.page_repair_type_manage_brand_name_input()
-        self.page_repair_type_manage_vd_input()
+        self.page_repair_type_manage_brand_name_input(brand_name)
+        self.page_repair_type_manage_vd_input(vd)
         self.page_repair_type_manage_eu_click()
         self.page_repair_type_manage_eu_select()
-        self.page_repair_type_guarantee_num_input()
+        self.page_repair_type_guarantee_num_input(guarantee_num)
         self.page_repair_type_manage_ttm_click()
         self.page_repair_type_manage_ttm_select()
-        self.page_repair_type_manage_desc_input()
+        self.page_repair_type_manage_desc_input(desc)
         self.page_repair_type_manage_save_button()
         time.sleep(2)
 
@@ -183,24 +187,24 @@ class PageRepairTypeManage(Base):
         time.sleep(2)
 
     # 备件管理编辑
-    def repair_type_manage_edit(self):
-        self.repair_type_manage_insert()
+    def repair_type_manage_edit(self, repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc):
+        self.repair_type_manage_insert(repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc)
         self.repair_type_manage_search()
         self.page_repair_type_manage_edit_button()
-        self.page_repair_type_manage_repair_type_name_input()
-        self.page_repair_type_manage_cu_input()
-        self.page_repair_type_manage_price_input()
-        self.page_repair_type_manage_price_unit()
+        self.page_repair_type_manage_repair_type_name_input(repair_type)
+        self.page_repair_type_manage_cu_input(cu)
+        self.page_repair_type_manage_price_input(price)
+        self.page_repair_type_manage_price_unit(price_unit)
         self.page_repair_type_manage_shop_name_click()
         self.page_repair_type_manage_shop_name_select()
-        self.page_repair_type_manage_brand_name_input()
-        self.page_repair_type_manage_vd_input()
+        self.page_repair_type_manage_brand_name_input(brand_name)
+        self.page_repair_type_manage_vd_input(vd)
         self.page_repair_type_manage_eu_click()
         self.page_repair_type_manage_eu_select()
-        self.page_repair_type_guarantee_num_input()
+        self.page_repair_type_guarantee_num_input(guarantee_num)
         self.page_repair_type_manage_ttm_click()
         self.page_repair_type_manage_ttm_select()
-        self.page_repair_type_manage_desc_input()
+        self.page_repair_type_manage_desc_input(desc)
         self.page_repair_type_manage_save_button()
         time.sleep(2)
 
