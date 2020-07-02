@@ -3,7 +3,7 @@ import time
 from base.base import Base
 
 
-class PageCuringWorkManage(Base):
+class PageCuringTeamManage(Base):
     """
         养护作业管理→养护职责管理→养护小组管理新增
     """
@@ -25,12 +25,12 @@ class PageCuringWorkManage(Base):
         self.base_click(page.curing_team_manage_insert_click)
 
     # 输入小组名称
-    def page_curing_team_manage_insert_team_name_input(self):
-        self.base_input(page.public_name_input, page.public_value)
+    def page_curing_team_manage_insert_team_name_input(self, team_name):
+        self.base_input(page.public_name_input, team_name)
 
     # 输入描述
-    def page_curing_team_manage_insert_desc_input(self):
-        self.base_input(page.public_desc_input, page.public_value2)
+    def page_curing_team_manage_insert_desc_input(self, desc):
+        self.base_input(page.public_desc_input, desc)
 
     # 点击小组成员新增
     def page_curing_team_manage_insert_team_member_click(self):
@@ -104,14 +104,18 @@ class PageCuringWorkManage(Base):
         组装业务方法
     """
 
-    # 新增
-    def curing_team_manage_insert(self):
+    # 点击养护小组管理
+    def curing_team_manage_click(self):
         self.page_curing_work_manage_click()
         self.page_curing_duty_manage_click()
         self.page_curing_team_manage_click()
+        time.sleep(2)
+
+    # 新增
+    def curing_team_manage_insert(self, team_name, desc):
         self.page_curing_team_manage_insert_click()
-        self.page_curing_team_manage_insert_team_name_input()
-        self.page_curing_team_manage_insert_desc_input()
+        self.page_curing_team_manage_insert_team_name_input(team_name)
+        self.page_curing_team_manage_insert_desc_input(desc)
         self.page_curing_team_manage_insert_team_member_click()
         self.page_curing_team_manage_member_insert_checkbox_select()
         self.page_curing_team_manage_member_insert_checkbox_sure_button()
@@ -129,18 +133,19 @@ class PageCuringWorkManage(Base):
         time.sleep(2)
 
     # 新增、查看、编辑
-    def curing_team_manage_edit(self):
-        self.curing_team_manage_insert()
+    def curing_team_manage_edit(self,team_name, desc):
+        self.curing_team_manage_insert(team_name, desc)
         self.curing_team_manage_search()
         self.page_curing_team_manage_edit_button()
-        self.page_curing_team_manage_insert_team_name_input()
-        self.page_curing_team_manage_insert_desc_input()
+        self.page_curing_team_manage_insert_team_name_input(team_name)
+        self.page_curing_team_manage_insert_desc_input(desc)
         self.page_curing_team_manage_insert_team_member_click()
         self.page_curing_team_manage_member_insert_checkbox_select()
         self.page_curing_team_manage_member_insert_checkbox_sure_button()
         time.sleep(2)
         self.page_curing_team_manage_member_save_button()
         time.sleep(2)
+
     # 重置
     def curing_team_manage_reset(self):
         self.curing_team_manage_search()

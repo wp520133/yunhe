@@ -40,24 +40,26 @@ class PageCuringDutySonManage(Base):
     def page_curing_duty_son_insert_curing_item_button(self):
         self.base_click(page.public_sure_button)
 
-    # 点击养护等级
-    def page_curing_duty_son_insert_curing_order_click(self):
-        self.base_click_enter(page.curing_duty_son_insert_curing_order_click)
-
-    # 选择养护等级
-    def page_curing_duty_son_insert_curing_order_select(self):
-        self.base_click_enter(page.curing_duty_son_insert_curing_order_click)
+    # # 点击养护等级
+    # def page_curing_duty_son_insert_curing_order_click(self):
+    #     self.base_click_enter(page.curing_duty_son_insert_curing_order_click)
+    #
+    # # 选择养护等级
+    # def page_curing_duty_son_insert_curing_order_select(self):
+    #     self.base_click_enter(page.curing_duty_son_insert_curing_order_click)
 
     # 输入养护名称
-    def page_curing_duty_son_insert_curing_name_input(self):
-        self.base_input(page.public_duty_name_input, page.public_value)
+    def page_curing_duty_son_insert_curing_name_input(self,curing_name):
+        self.base_input(page.public_duty_name_input, curing_name)
 
     # 点击下一步
     def page_curing_duty_son_insert_next_click(self):
         self.base_click(page.curing_duty_son_insert_next_click)
+
     # 取消新增的职责模板
     def page_curing_duty_son_insert_duty_xls_remove_icon_click(self):
         self.base_click(page.curing_duty_son_insert_duty_xls_remove_icon_click)
+
     # 点击选择职责模板
     def page_curing_duty_son_insert_duty_xls_click(self):
         self.base_click(page.curing_duty_son_insert_duty_xls_click)
@@ -74,6 +76,9 @@ class PageCuringDutySonManage(Base):
     def page_curing_duty_son_insert_finish_button(self):
         self.base_click(page.curing_duty_son_insert_finish_button)
 
+    # 点击返回
+    def page_curing_duty_son_return_click(self):
+        self.base_click(page.public_return_click)
     """ 
         养护职责管理(子)查询
     """
@@ -117,18 +122,35 @@ class PageCuringDutySonManage(Base):
     """
         组装业务方法
     """
-    # 新增
-    def curing_duty_son_insert(self):
+
+    # 点击养护职责(子)管理
+    def curing_duty_son_click(self):
         self.page_curing_work_manage_click()
         self.page_curing_duty_manage_click()
+        self.page_curing_duty_son_manage()
+        time.sleep(2)
+    # 新增异常数据
+    def curing_duty_son_except_insert(self,curing_name):
+        self.page_curing_duty_son_insert_manage()
+        self.page_curing_duty_son_insert_curing_item_icon_click()
+        self.page_curing_duty_son_insert_curing_item_radio_click()
+        self.page_curing_duty_son_insert_curing_item_button()
+        # self.page_curing_duty_son_insert_curing_order_click()
+        # self.page_curing_duty_son_insert_curing_order_select()
+        self.page_curing_duty_son_insert_curing_name_input(curing_name)
+        self.page_curing_duty_son_insert_next_click()
+
+        time.sleep(2)
+    # 新增
+    def curing_duty_son_insert(self,curing_name):
         self.page_curing_duty_son_manage()
         self.page_curing_duty_son_insert_manage()
         self.page_curing_duty_son_insert_curing_item_icon_click()
         self.page_curing_duty_son_insert_curing_item_radio_click()
         self.page_curing_duty_son_insert_curing_item_button()
-        self.page_curing_duty_son_insert_curing_order_click()
-        self.page_curing_duty_son_insert_curing_order_select()
-        self.page_curing_duty_son_insert_curing_name_input()
+        # self.page_curing_duty_son_insert_curing_order_click()
+        # self.page_curing_duty_son_insert_curing_order_select()
+        self.page_curing_duty_son_insert_curing_name_input(curing_name)
         self.page_curing_duty_son_insert_next_click()
         self.page_curing_duty_son_insert_duty_xls_click()
         self.page_curing_duty_son_insert_duty_xls_radio_click()
@@ -143,17 +165,17 @@ class PageCuringDutySonManage(Base):
         time.sleep(2)
 
     # 编辑
-    def curing_duty_son_edit(self):
-        self.curing_duty_son_insert()
+    def curing_duty_son_edit(self,curing_name):
+        self.curing_duty_son_insert(curing_name)
         self.curing_duty_son_search()
         self.page_curing_duty_son_edit_button()
         self.page_curing_duty_son_insert_curing_item_icon_click()
         self.page_curing_duty_son_insert_curing_item_radio_click()
         self.page_curing_duty_son_insert_curing_item_button()
         time.sleep(2)
-        self.page_curing_duty_son_insert_curing_order_click()
-        self.page_curing_duty_son_insert_curing_order_select()
-        self.page_curing_duty_son_insert_curing_name_input()
+        # self.page_curing_duty_son_insert_curing_order_click()
+        # self.page_curing_duty_son_insert_curing_order_select()
+        self.page_curing_duty_son_insert_curing_name_input(curing_name)
         self.page_curing_duty_son_insert_next_click()
         self.page_curing_duty_son_insert_duty_xls_remove_icon_click()
         self.page_curing_duty_son_insert_duty_xls_click()

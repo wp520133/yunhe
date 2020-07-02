@@ -22,11 +22,13 @@ class TestDeptManage(unittest.TestCase):
         GetDriver().quit_driver()
 
     # 测试点击部件类别管理
+    @allure.step(title="测试点击部件类别管理")
     def test_units_class_manage_click(self):
         self.pucm.units_class_manage_click()
 
     # 测试部件类别管理异常数据新增
     @parameterized.expand(read_txt("base_info_manage/units_class.txt"))
+    @allure.step(title="部件类别管理输入异常数据新增")
     def test_units_class_manage_insert(self, units_name, desc, success):
         self.pucm.units_class_manage_insert(units_name, desc)
         if success:
@@ -36,10 +38,12 @@ class TestDeptManage(unittest.TestCase):
                 self.pucm.base_get_image()
 
     # 测试新增、查询、编辑
+    @allure.step(title="部件类别管理新增、查询到编辑")
     def test_units_class_manage_edit(self):
         self.pucm.units_class_manage_edit(page.public_value, page.public_value)
 
     # 测试重置
+    @allure.step(title="部件类别管理重置")
     def test_units_class_manage_reset(self):
         self.pucm.units_class_manage_reset()
 

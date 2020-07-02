@@ -10,7 +10,7 @@ class TestDeptManage(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.driver = GetDriver().get_driver()
         cls.pcrm = PageCuringRequestManage(cls.driver)
-        cls.pcrm.system_login("admin", 123456)
+        cls.pcrm.system_login()
 
     @classmethod
     def tearDownClass(cls) -> None:

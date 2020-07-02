@@ -22,6 +22,7 @@ class TestSystemClassManage(unittest.TestCase):
         GetDriver().quit_driver()
 
     # 点击系统类别管理
+    @allure.step(title="点击系统类别管理")
     def test_system_class_manage_click(self):
         self.pscm.system_class_manage_click()
 

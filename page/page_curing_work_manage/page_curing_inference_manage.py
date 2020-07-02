@@ -29,8 +29,8 @@ class PageCuringInferenceManage(Base):
         self.base_click(page.curing_inference_manage_insert_click)
 
     # 输入结论名称
-    def page_curing_inference_manage_insert_inference_name_input(self):
-        self.base_input(page.public_name_input, page.public_value)
+    def page_curing_inference_manage_insert_inference_name_input(self, inference):
+        self.base_input(page.public_name_input, inference)
 
     # 点击结果标记
     def page_curing_inference_manage_insert_remark_click(self):
@@ -41,13 +41,16 @@ class PageCuringInferenceManage(Base):
         self.base_click(page.curing_inference_manage_insert_remark_select)
 
     # 输入描述
-    def page_curing_inference_manage_insert_desc_input(self):
-        self.base_input(page.public_desc_input, page.public_value)
+    def page_curing_inference_manage_insert_desc_input(self, desc):
+        self.base_input(page.public_desc_input, desc)
 
     # 点击保存
     def page_curing_inference_manage_insert_save_button(self):
         self.base_click(page.public_insert_save_button)
 
+    # 点击返回
+    def page_curing_inference_manage_return_click(self):
+        self.base_click(page.public_return_click)
     """
         养护结论管理查询
     """
@@ -67,6 +70,7 @@ class PageCuringInferenceManage(Base):
     """
         养护结论管理重置
     """
+
     # 点击重置
     def page_curing_inference_manage_reset_button(self):
         self.base_click(page.public_reset_button)
@@ -82,16 +86,21 @@ class PageCuringInferenceManage(Base):
     """
         组合业务方法
     """
-    # 新增
-    def curing_inference_manage_insert(self):
+
+    # 点击养护结论
+    def curing_inference_manage_click(self):
         self.page_curing_work_manage_click()
         self.page_curing_duty_manage_click()
         self.page_curing_inference_manage_click()
+        time.sleep(2)
+
+    # 新增
+    def curing_inference_manage_insert(self, inference, desc):
         self.page_curing_inference_manage_insert_click()
-        self.page_curing_inference_manage_insert_inference_name_input()
+        self.page_curing_inference_manage_insert_inference_name_input(inference)
         self.page_curing_inference_manage_insert_remark_click()
         self.page_curing_inference_manage_insert_remark_select()
-        self.page_curing_inference_manage_insert_desc_input()
+        self.page_curing_inference_manage_insert_desc_input(desc)
         self.page_curing_inference_manage_insert_save_button()
         time.sleep(2)
 
@@ -109,13 +118,13 @@ class PageCuringInferenceManage(Base):
         time.sleep(2)
 
     # 编辑
-    def curing_inference_manage_edit(self):
-        self.curing_inference_manage_insert()
+    def curing_inference_manage_edit(self, inference, desc):
+        self.curing_inference_manage_insert(inference, desc)
         self.curing_inference_manage_search()
         self.page_curing_inference_manage_edit_button()
-        self.page_curing_inference_manage_insert_inference_name_input()
+        self.page_curing_inference_manage_insert_inference_name_input(inference)
         self.page_curing_inference_manage_insert_remark_click()
         self.page_curing_inference_manage_insert_remark_select()
-        self.page_curing_inference_manage_insert_desc_input()
+        self.page_curing_inference_manage_insert_desc_input(desc)
         self.page_curing_inference_manage_insert_save_button()
         time.sleep(2)

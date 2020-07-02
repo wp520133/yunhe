@@ -29,12 +29,8 @@ class PageCuringDutyXlsManage(Base):
         self.base_click(page.curing_duty_cls_manage_insert_click)
 
     # 输入职责模板名称
-    def page_curing_duty_cls_manage_insert_duty_cls_name_input(self):
-        self.base_input(page.public_standard_duty_name_input, page.public_value)
-
-    # 点击职责模板名称
-    def page_curing_duty_cls_manage_insert_duty_cls_name_click(self):
-        self.base_click(page.public_standard_duty_name_input)
+    def page_curing_duty_cls_manage_insert_duty_cls_name_input(self, cls_name):
+        self.base_input(page.public_standard_duty_name_input, cls_name)
 
     # 点击养护等级
     def page_curing_duty_cls_manage_insert_curing_order_click(self):
@@ -58,15 +54,23 @@ class PageCuringDutyXlsManage(Base):
 
     # 点击养护要求
     def page_curing_duty_cls_manage_insert_curing_request_click(self):
-        self.base_click(page.curing_duty_cls_manage_insert_curing_request_click)
+        self.base_click(page.curing_duty_cls_manage_insert_curing_request_icon)
 
     # 选择养护要求
     def page_curing_duty_cls_manage_insert_curing_request_select(self):
         self.base_click(page.curing_duty_cls_manage_insert_curing_request_select)
 
+    # 点击确定
+    def page_curing_duty_cls_manage_sure_button(self):
+        self.base_click(page.curing_duty_cls_manage_insert_curing_sure_button)
+
     # 点击保存
     def page_curing_duty_cls_manage_insert_save_button(self):
         self.base_click(page.public_insert_save_button)
+
+    # 点击返回
+    def page_curing_duty_cls_manage_return_click(self):
+        self.base_click(page.public_return_click)
 
     """
         养护职责模板管理查询
@@ -107,17 +111,21 @@ class PageCuringDutyXlsManage(Base):
     # 回退
     def page_curing_duty_cls_manage_back(self):
         self.base_back()
+
     """
         组装业务方法
     """
 
-    # 新增
-    def curing_duty_cls_manage_insert(self):
+    def curing_duty_cls_manage_click(self):
         self.page_curing_work_manage_click()
         self.page_curing_duty_manage_click()
         self.page_curing_duty_cls_manage_click()
+        time.sleep(2)
+
+    # 新增
+    def curing_duty_cls_manage_insert(self, cls_name):
         self.page_curing_duty_cls_manage_insert_click()
-        self.page_curing_duty_cls_manage_insert_duty_cls_name_input()
+        self.page_curing_duty_cls_manage_insert_duty_cls_name_input(cls_name)
         self.page_curing_duty_cls_manage_insert_curing_order_click()
         self.page_curing_duty_cls_manage_insert_curing_order_select()
         self.page_curing_duty_cls_manage_insert_repair_type_icon_click()
@@ -125,7 +133,7 @@ class PageCuringDutyXlsManage(Base):
         self.page_curing_duty_cls_manage_insert_repair_type_sure_button()
         self.page_curing_duty_cls_manage_insert_curing_request_click()
         self.page_curing_duty_cls_manage_insert_curing_request_select()
-        self.page_curing_duty_cls_manage_insert_duty_cls_name_click()
+        self.page_curing_duty_cls_manage_sure_button()
         self.page_curing_duty_cls_manage_insert_save_button()
         time.sleep(2)
 
@@ -136,11 +144,12 @@ class PageCuringDutyXlsManage(Base):
         time.sleep(2)
 
     # 编辑
-    def curing_duty_cls_manage_edit(self):
-        self.curing_duty_cls_manage_insert()
+    def curing_duty_cls_manage_edit(self, cls_name):
+        self.curing_duty_cls_manage_insert(cls_name)
         self.curing_duty_cls_manage_search()
         self.page_curing_duty_cls_manage_edit_button()
-        self.page_curing_duty_cls_manage_insert_duty_cls_name_input()
+        time.sleep(1)
+        self.page_curing_duty_cls_manage_insert_duty_cls_name_input(cls_name)
         self.page_curing_duty_cls_manage_insert_curing_order_click()
         self.page_curing_duty_cls_manage_insert_curing_order_select()
         self.page_curing_duty_cls_manage_insert_repair_type_icon_click()
@@ -148,8 +157,7 @@ class PageCuringDutyXlsManage(Base):
         self.page_curing_duty_cls_manage_insert_repair_type_sure_button()
         self.page_curing_duty_cls_manage_insert_curing_request_click()
         self.page_curing_duty_cls_manage_insert_curing_request_select()
-        self.page_curing_duty_cls_manage_insert_curing_request_select()
-        self.page_curing_duty_cls_manage_insert_duty_cls_name_click()
+        self.page_curing_duty_cls_manage_sure_button()
         self.page_curing_duty_cls_manage_insert_save_button()
         time.sleep(2)
 
