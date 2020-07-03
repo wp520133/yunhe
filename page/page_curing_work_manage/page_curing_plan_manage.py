@@ -152,9 +152,13 @@ class PageCuringPlanManage(Base):
     def page_curing_plan_manage_search_type_click(self):
         self.base_click(page.curing_plan_manage_search_type_click)
 
-    # 选择状态
+    # 选择状态(开启)
     def page_curing_plan_manage_search_type_select(self):
         self.base_click(page.curing_plan_manage_search_type_select)
+
+    # 选择禁用
+    def page_curing_plan_manage_search_type_select2(self):
+        self.base_click(page.curing_plan_manage_search_type_select2)
 
     # 查询
     def page_curing_plan_manage_search_button(self):
@@ -317,15 +321,14 @@ class PageCuringPlanManage(Base):
         self.page_curing_plan_manage_search_type_click()
         self.page_curing_plan_manage_search_type_select()
         self.page_curing_plan_manage_search_button()
-        self.page_curing_plan_manage_watch_click()
         self.base_click(page.public_disable_click)
         time.sleep(2)
 
     # 延迟
-    def curing_plan_manage_delay(self,name,delay_day):
+    def curing_plan_manage_delay(self, name, delay_day):
         self.page_curing_plan_manage_insert_plan_name_search(name)
         self.page_curing_plan_manage_search_type_click()
-        self.page_curing_plan_manage_search_type_select()
+        self.page_curing_plan_manage_search_type_select2()
         self.page_curing_plan_manage_search_button()
         self.page_curing_plan_manage_delay()
         self.page_curing_plan_manage_delay_day(delay_day)

@@ -23,31 +23,37 @@ class TestSystemClassManage(unittest.TestCase):
 
     # 点击
     @allure.step(title="点击备件型号管理")
-    def test_repair_type_manage_click(self):
+    def test_01_repair_type_manage_click(self):
         self.prtm.repair_type_manage_click()
 
-    # 测试新增输入异常数据
-    @parameterized.expand(read_txt("base_info_manage/repair_type.txt"))
-    @allure.step(title="备件型号管理输入异常数据新增")
-    def test_repair_type_manage_insert(self, repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc):
-        self.prtm.repair_type_manage_insert(repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc)
+    # # 测试新增输入异常数据
+    # @parameterized.expand(read_txt("base_info_manage/repair_type.txt"))
+    # @allure.step(title="备件型号管理输入异常数据新增")
+    # def test_02_repair_type_manage_insert(self, repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc,
+    #                                       success):
+    #     self.prtm.repair_type_manage_insert(repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc)
+    #     if success:
+    #         try:
+    #             self.prtm.page_repair_type_manage_return_click()
+    #         except:
+    #             self.prtm.base_get_image()
 
     # 测试新增、查询、编辑
     @allure.step(title="备件型号管理新增、查询到编辑")
-    def test_repair_type_manage_edit(self):
+    def test_03_repair_type_manage_edit(self):
         self.prtm.repair_type_manage_edit(page.public_value, page.public_value_num2, page.public_order_num,
                                           page.public_value_num2, page.public_value, page.public_order_num,
                                           page.public_order_num, page.public_value)
 
-    # 测试重置
-    @allure.step(title="备件型号管理重置")
-    def test_repair_type_manage_reset(self):
-        self.prtm.repair_type_manage_reset()
-
-    # 测试查看
-    @allure.step(title="备件型号管理查看")
-    def test_repair_type_manage_watch(self):
-        self.prtm.repair_type_manage_watch()
+    # # 测试重置
+    # @allure.step(title="备件型号管理重置")
+    # def test_04_repair_type_manage_reset(self):
+    #     self.prtm.repair_type_manage_reset(page.public_value, page.public_value)
+    #
+    # # 测试查看
+    # @allure.step(title="备件型号管理查看")
+    # def test_05_repair_type_manage_watch(self):
+    #     self.prtm.repair_type_manage_watch(page.public_value, page.public_value)
 
 
 if __name__ == '__main__':

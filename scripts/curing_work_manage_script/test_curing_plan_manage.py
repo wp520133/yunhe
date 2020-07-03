@@ -22,13 +22,13 @@ class TestCuringTeamManage(unittest.TestCase):
         GetDriver().quit_driver()
 
     # 点击养护计划管理
-    def test_curing_plan_manage_click(self):
+    def test_01_curing_plan_manage_click(self):
         self.pcpm.curing_plan_manage_click()
 
     # 养护计划管理新增
     @parameterized.expand(read_txt("curing_work_manage/curing_plan.txt"))
-    def test_curing_plan_manage_except_insert(self, plan_name, content, remark, success):
-        self.pcpm.curing_plan_manage_insert(plan_name, content, remark)
+    def test_02_curing_plan_manage_except_insert(self, plan_name, content, remark, success):
+        self.pcpm.curing_plan_manage_except_insert(plan_name, content, remark)
         if success:
             try:
                 self.pcpm.page_curing_plan_manage_insert_return_click()
@@ -36,20 +36,20 @@ class TestCuringTeamManage(unittest.TestCase):
                 self.pcpm.base_get_image()
 
     # 养护计划管理编辑
-    def test_curing_plan_manage_edit(self):
+    def test_03_curing_plan_manage_edit(self):
         self.pcpm.curing_plan_manage_edit(page.public_value, page.public_value, page.public_value, page.public_value)
 
     # 测试查看
-    def test_curing_plan_manage_watch(self):
+    def test_04_curing_plan_manage_watch(self):
         self.pcpm.curing_plan_manage_watch(page.public_value)
 
     # 测试禁用
-    def test_curing_plan_manage_disable(self):
+    def test_05_curing_plan_manage_disable(self):
         self.pcpm.curing_plan_manage_disable(page.public_value)
 
     # 测试延迟
-    def test_curing_plan_manage_delay(self):
-        self.pcpm.curing_plan_manage_delay(page.public_value,page.public_order_num)
+    def test_06_curing_plan_manage_delay(self):
+        self.pcpm.curing_plan_manage_delay(page.public_value, page.public_order_num)
 
 
 if __name__ == '__main__':

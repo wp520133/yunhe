@@ -90,9 +90,9 @@ public_order_input = By.ID, "order"
 # 公共的编号code
 public_code_input = By.ID, "code"
 # 公共的四行查看
-public_watch_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(1)"
+public_watch_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(5) > div:nth-child(1) > button:nth-child(1)"
 # 公共的四行编辑
-public_edit_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(2)"
+public_edit_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(5) > div:nth-child(1) > button:nth-child(2)"
 # 公共的描述
 public_desc_input = By.ID, "desc"
 # 公共的输入类型
@@ -169,13 +169,13 @@ public_apprival_through_button = By.CSS_SELECTOR, "form.ant-form:nth-child(8) > 
 # 公共的返回
 public_return_click = By.CSS_SELECTOR, ".ant-btn-link"
 # 点击禁用
-public_disable_click= By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(4)"
+public_disable_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(4)"
 # 点击延迟
-curing_plan_manage_delay=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(5)"
+curing_plan_manage_delay = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(5)"
 # 输入延迟天数
-curing_plan_manage_delay_day=By.CSS_SELECTOR,"#delayDay"
+curing_plan_manage_delay_day = By.CSS_SELECTOR, "#delayDay"
 # 点击确定
-curing_plan_manage_delay_sure_button=By.CSS_SELECTOR,".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+curing_plan_manage_delay_sure_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
 ########################################################################################################################
 """
     系统登录
@@ -262,7 +262,7 @@ role_manage_insert_click_return = By.CSS_SELECTOR, ".ant-btn-link"
 # 系统管理→角色管理编辑(公有)
 
 # 系统管理→角色管理权限
-role_manage_power_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(4) > td:nth-child(6) > div:nth-child(1) > button:nth-child(4)"
+role_manage_power_four_line_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(5) > div:nth-child(1) > button:nth-child(4)"
 role_manage_power_checkbox = By.CSS_SELECTOR, ".ant-tree > li:nth-child(1) > span:nth-child(2)"
 role_manage_power_down_icon = By.CSS_SELECTOR, ".ant-tree > li:nth-child(1) > span:nth-child(1) > i:nth-child(1) > svg:nth-child(1)"
 role_manage_power_save_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
@@ -1216,7 +1216,7 @@ curing_plan_manage_click = By.CSS_SELECTOR, "#root>section>aside>div>div>ul>li>u
 # 点击新增
 curing_plan_manage_insert_click = By.CSS_SELECTOR, "#root>section>section>main>div>div>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
 # 点击导出文档模板
-curing_plan_manage_insert_export_click=By.CSS_SELECTOR,"#docExportTemplate > div:nth-child(1)"
+curing_plan_manage_insert_export_click = By.CSS_SELECTOR, "#docExportTemplate > div:nth-child(1)"
 # 选择导出文档模板
 # 输入养护计划名称(公有)
 curing_plan_manage_insert_plan_name = By.ID, "planName"
@@ -1239,10 +1239,10 @@ curing_plan_manage_insert_next_create_time_select = By.CSS_SELECTOR, ".ant-calen
 # 点击是否自动审核(是)
 curing_plan_manage_insert_if_auto_audit_click = By.CSS_SELECTOR, "#root>section>section>main>div>section>main>div:nth-child(2)>div:nth-child(3)>div>form>div:nth-child(7)>div:nth-child(2)>div>span>div>label:first-child>span:first-child"
 # 点击闸号
-curing_plan_manage_insert_get_no_click=By.CSS_SELECTOR,"#sluiceGateNum > div:nth-child(1)"
+curing_plan_manage_insert_get_no_click = By.CSS_SELECTOR, "#sluiceGateNum > div:nth-child(1)"
 # 选择闸号
 # 点击负责人icon
-curing_plan_manage_insert_principal_click=By.CSS_SELECTOR,".anticon-user > svg:nth-child(1) > path:nth-child(1)"
+curing_plan_manage_insert_principal_click = By.CSS_SELECTOR, ".anticon-user > svg:nth-child(1) > path:nth-child(1)"
 # 选择负责人radio
 curing_plan_manage_insert_principal_radio = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
 # 点击确定
@@ -1252,7 +1252,7 @@ curing_plan_manage_insert_principal_sure = By.CSS_SELECTOR, ".ant-modal-footer >
 # 点击下一步
 curing_plan_manage_insert_next_click = By.CSS_SELECTOR, "button.ant-btn:nth-child(14)"
 # 点击删除职责
-curing_plan_manage_delete_duty_icon=By.CSS_SELECTOR,"i.anticon:nth-child(7) > svg:nth-child(1)"
+curing_plan_manage_delete_duty_icon = By.CSS_SELECTOR, "i.anticon:nth-child(7) > svg:nth-child(1)"
 # 点击添加一条职责
 curing_plan_manage_insert_one_duty_click = By.CSS_SELECTOR, ".ant-btn-dashed"
 # 点击养护职责icon
@@ -1274,8 +1274,10 @@ curing_plan_manage_insert_finish_click = By.CSS_SELECTOR, "button.ant-btn:nth-ch
 # 输入计划名称(公有)
 # 点击状态
 curing_plan_manage_search_type_click = By.CSS_SELECTOR, ".ant-select-selection"
-# 选择状态
+# 选择状态(启用)
 curing_plan_manage_search_type_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(1)"
+# 选择状态(禁用)
+curing_plan_manage_search_type_select2 = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(2)"
 # 点击查询(公有)
 
 """
@@ -1291,11 +1293,11 @@ curing_plan_manage_search_type_select = By.CSS_SELECTOR, "li.ant-select-dropdown
     养护计划管理编辑
 """
 # 点击编辑(公有)
-curing_plan_manage_edit_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(2)"
+curing_plan_manage_edit_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(2)"
 # 点击查看
-curing_plan_manage_watch_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(1)"
+curing_plan_manage_watch_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(9) > div:nth-child(1) > button:nth-child(1)"
 # 点击详情
-curing_plan_manage_details=By.CSS_SELECTOR,"div.ant-tabs-tab:nth-child(2)"
+curing_plan_manage_details = By.CSS_SELECTOR, "div.ant-tabs-tab:nth-child(2)"
 """
     养护计划禁用
 """

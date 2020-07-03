@@ -18,7 +18,7 @@ class PageRepairTypeManage(Base):
 
     # 点击备件型号管理
     def page_repair_type_manage_click(self):
-        self.base_click(page.repair_type_manage_insert_click)
+        self.base_click(page.repair_type_manage_click)
 
     # 点击新增
     def page_page_repair_type_manage_insert_click(self):
@@ -100,6 +100,10 @@ class PageRepairTypeManage(Base):
     def page_repair_type_manage_save_button(self):
         self.base_click(page.public_insert_save_button)
 
+    # 点击返回
+    def page_repair_type_manage_return_click(self):
+        self.base_click(page.public_return_click)
+
     """
         备件管理查询
     """
@@ -109,8 +113,8 @@ class PageRepairTypeManage(Base):
         self.base_input(page.public_name_input, page.public_value)
 
     # 输入品牌名
-    def page_repair_type_manage_search_brand_name_input(self):
-        self.base_input(page.public_brand_name_input, page.public_value)
+    def page_repair_type_manage_search_brand_name_input(self, brand_name):
+        self.base_input(page.public_brand_name_input, brand_name)
 
     # 输入编号(随机的,不做查询)
     # 点击查询
@@ -180,16 +184,16 @@ class PageRepairTypeManage(Base):
         time.sleep(2)
 
     # 备件管理查询
-    def repair_type_manage_search(self):
-        self.page_repair_type_manage_search_repair_type_name_input()
-        self.page_repair_type_manage_search_brand_name_input()
+    def repair_type_manage_search(self, repair_type, brand_name):
+        self.page_repair_type_manage_repair_type_name_input(repair_type)
+        self.page_repair_type_manage_search_brand_name_input(brand_name)
         self.page_repair_type_manage_search_button()
         time.sleep(2)
 
     # 备件管理编辑
     def repair_type_manage_edit(self, repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc):
         self.repair_type_manage_insert(repair_type, cu, price, price_unit, brand_name, vd, guarantee_num, desc)
-        self.repair_type_manage_search()
+        self.repair_type_manage_search(repair_type, brand_name)
         self.page_repair_type_manage_edit_button()
         self.page_repair_type_manage_repair_type_name_input(repair_type)
         self.page_repair_type_manage_cu_input(cu)
@@ -209,14 +213,14 @@ class PageRepairTypeManage(Base):
         time.sleep(2)
 
     # 备件管理重置
-    def repair_type_manage_reset(self):
-        self.repair_type_manage_search()
+    def repair_type_manage_reset(self, repair_type, brand_name):
+        self.repair_type_manage_search(repair_type, brand_name)
         self.page_repair_type_manage_reset_button()
         time.sleep(2)
 
     # 备件管理查看
-    def repair_type_manage_watch(self):
-        self.repair_type_manage_search()
+    def repair_type_manage_watch(self, repair_type, brand_name):
+        self.repair_type_manage_search(repair_type, brand_name)
         self.page_repair_type_manage_watch_button()
         self.page_repair_type_manage_back()
         time.sleep(2)
