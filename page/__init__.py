@@ -1310,7 +1310,231 @@ curing_plan_manage_details = By.CSS_SELECTOR, "div.ant-tabs-tab:nth-child(2)"
 # 延时天数(公有)
 # 确定(公有)
 
+"""
+    养护任务管理
+"""
+# 点击养护任务管理
+curing_tesk_manage_click = By.CSS_SELECTOR, "#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(3)"
+# 点击养护任务子管理
+curing_tesk_son_manage_click = By.CSS_SELECTOR, "#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(3)>ul>li:nth-child(1)"
+# 输入名称
+curing_tesk_son_manage_name_input = By.ID, "name"
+# 点击状态
+curing_tesk_son_manage_status_click = By.CSS_SELECTOR, ".ant-select-selection"
+# 选择状态(待执行)
+curing_tesk_son_manage_status_select = By.CSS_SELECTOR, "body>div:last-child>div>div>div>ul>li:first-child"
+# 点击查询
+curing_tesk_son_manage_search_button = By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+# 点击查看
+curing_tesk_son_manage_watch_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(2)"
+# 点击工作内容
+curing_tesk_son_manage_work_content_click = By.CSS_SELECTOR, "div.ant-tabs-tab:nth-child(2)"
+# 点击返回
+curing_tesk_son_manage_return_click = By.CSS_SELECTOR, ".ant-btn"
+# 点击编辑
+curing_tesk_son_manage_edit_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(4)"
+# 输入养护任务名称
+curing_tesk_son_manage_edit_name_input = By.ID, "taskName"
+# 点击养护等级
+curing_tesk_son_manage_edit_order_click = By.CSS_SELECTOR, "#root>section>section>main>div>section>main>div:last-child>div:last-child>div>form>div:nth-child(3)>div:nth-child(2)>div>span>div"
+# 选择养护等级
+curing_tesk_son_manage_edit_order_select = By.CSS_SELECTOR, "body>div:nth-of-type(3)>div>div>div>ul>li:first-child"
+# 点击时间
+curing_tesk_son_manage_edit_time_click = By.CSS_SELECTOR, ".ant-calendar-picker-input"
+# 选择前时间
+curing_tesk_son_manage_edit_time_before = By.CSS_SELECTOR, ".ant-calendar-selected-start-date > div:nth-child(1)"
+# 选择后时间
+curing_tesk_son_manage_edit_time_after = By.CSS_SELECTOR, ".ant-calendar-selected-end-date > div:nth-child(1)"
+# 输入执行内容
+curing_tesk_son_manage_edit_excute_content = By.ID, "content"
+# 点击导出文档模板
+curing_tesk_son_manage_edit_data_template_click = By.CSS_SELECTOR, "#docExportTemplate > div:nth-child(1)"
+# 选择导出文档模板
+curing_tesk_son_manage_edit_data_template_select = By.CSS_SELECTOR, "body>div:last-child>div>div>div>ul>li:nth-child(1)"
+# 点击类型
+curing_tesk_son_manage_edit_type_click = By.CSS_SELECTOR, "#root>section>section>main>div>section>main>div:nth-child(2)>div:nth-child(3)>div>form>div:nth-child(7)>div:last-child>div>span>div>div"
+# 选择类型
+curing_tesk_son_manage_edit_type_select = By.CSS_SELECTOR, "body>div:nth-of-type(3)>div>div>div>ul>li:nth-child(1)"
+# 点击闸号
+curing_tesk_son_manage_edit_num_click = By.CSS_SELECTOR, "#root>section>section>main>div>section>main>div:nth-child(2)>div:nth-child(3)>div>form>div:nth-child(8)>div:nth-child(2)>div>span>div"
+# 选择闸号
+curing_tesk_son_manage_edit_num_select = By.CSS_SELECTOR, "body>div:last-child>div>div>div>ul>li:nth-child(1)"
+# 点击负责人icon
+curing_tesk_son_manage_edit_pc_click = By.CSS_SELECTOR, ".anticon-user"
+# 选择负责人radio
+curing_tesk_son_manage_edit_pc_radio = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+curing_tesk_son_manage_edit_sure_clck = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 输入备注
+curing_tesk_son_manage_edit_remark = By.ID, "remark"
+# 点击下一步
+curing_tesk_son_manage_edit_next = By.CSS_SELECTOR, "button.ant-btn:nth-child(13)"
+# 删除养护职责
+curing_tesk_son_manage_edit_delete_duty = By.CSS_SELECTOR, "i.anticon:nth-child(7) > svg:nth-child(1)"
+# 点击添加职责icon
+curing_tesk_son_manage_edit_insert_duty_icon_click = By.CSS_SELECTOR, ".ant-btn-dashed"
+# 点击养护职责icon
+curing_tesk_son_manage_edit_curing_duty_click = By.CSS_SELECTOR, "div.ant-row:nth-child(2) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择养护职责radio
+curing_tesk_son_manage_edit_curing_duty_select = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定(公有)
+curing_tesk_son_manage_edit_curing_duty_sure = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 输入工作内容名称
+curing_tesk_son_manage_edit_work_content_name = By.CSS_SELECTOR, "#root>section>section>main>div>section>main>div:nth-child(2)>div:nth-child(3)>div>form>div:nth-child(3)>div:nth-child(3)>div>div>span>input"
+# 点击是否为养护小组
+curing_tesk_son_manage_edit_is_team_click = By.CSS_SELECTOR, ".ant-select-selection"
+# 选择是否为养护小组
+curing_tesk_son_manage_edit_is_team_select = By.CSS_SELECTOR, "body>div:last-child>div>div>div>ul>li:nth-child(1)"
+# 点击养护小组icon
+curing_tesk_son_manage_edit_curing_team_icon = By.CSS_SELECTOR, "div.ant-row:nth-child(6) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择养护小组radio
+curing_tesk_son_manage_edit_curing_team_radio = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+curing_tesk_son_manage_edit_curing_team_sure_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 点击完成
+curing_tesk_son_manage_edit_curing_team_finish = By.CSS_SELECTOR, "button.ant-btn:nth-child(2)"
+# 点击催办
+curing_tesk_son_manage_us_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(5)"
+# 点击确定
+curing_tesk_son_manage_us_sure_click = By.CSS_SELECTOR, ".ant-modal-confirm-btns > button:nth-child(2)"
+# 点击延时
+curing_tesk_son_manage_delayed_click = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(7) > div:nth-child(1) > button:nth-child(6)"
+# 输入延时天数
+curing_tesk_son_manage_delayed_days_click = By.CSS_SELECTOR, ".ant-input-number-input"
+# 点击确定
+curing_tesk_son_manage_delayed_sure_click = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
 
+"""
+    紧急养护任务新增
+"""
+
+# 点击紧急养护任务
+curing_urgency_task_click = By.CSS_SELECTOR, "#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(3)>ul>li:nth-child(2)"
+# 点击新增
+curing_urgency_task_insert_click = By.CSS_SELECTOR, "#root>section>section>main>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
+# 输入养护名称
+curing_urgency_task_insert_name = By.ID, "taskName"
+# 点击选择时间
+curing_urgency_task_insert_select_name = By.CSS_SELECTOR, ".ant-calendar-picker-input"
+# 选择前时间
+curing_urgency_task_insert_select_before_name = By.CSS_SELECTOR, ".ant-calendar-today > div:nth-child(1)"
+# 选择后时间
+curing_urgency_task_insert_select_after_name = By.CSS_SELECTOR, ".ant-calendar-current-week > td:nth-child(7) > div:nth-child(1)"
+# 点击是否为养护小组
+curing_urgency_task_insert_is_team_click = By.CSS_SELECTOR, ".ant-select-selection"
+# 选择是否为养护小组
+curing_urgency_task_insert_is_team_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击养护人icon
+curing_urgency_task_insert_curing_persion_icon = By.CSS_SELECTOR, ".anticon-setting"
+# 选择养护人radio
+curing_urgency_task_insert_radio = By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+curing_urgency_task_insert_sure_button = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 输入执行内容
+curing_urgency_task_insert_excute_content= By.ID,"content"
+# 点击是否自动审核
+curing_urgency_task_insert_is_approval=By.CSS_SELECTOR,".ant-radio-checked > input:nth-child(1)"
+# 输入备注
+curing_urgency_task_insert_remark=By.ID,"remark"
+# 点击保存
+curing_urgency_task_insert_save=By.CSS_SELECTOR,".ant-col-xs-offset-0 > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+"""
+    紧急养护任务查询
+"""
+# 输入名称
+curing_urgency_task_search_name=By.ID,"name"
+# 点击状态
+curing_urgency_task_search_status_click=By.CSS_SELECTOR, ".ant-select-selection"
+# 选择状态
+curing_urgency_task_search_status_select = By.CSS_SELECTOR, "li.ant-select-dropdown-menu-item:nth-child(1)"
+# 点击查询
+curing_urgency_task_search_button=By.CSS_SELECTOR, "div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(1)"
+# 点击重置
+curing_urgency_task_reset_button=By.CSS_SELECTOR,"div.ant-form-item-control-wrapper:nth-child(1) > div:nth-child(1) > span:nth-child(1) > button:nth-child(2)"
+# 点击查看
+curing_urgency_task_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > div:nth-child(1) > button:nth-child(1)"
+
+# 点击编辑
+curing_urgency_task_edit_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > div:nth-child(1) > button:nth-child(3)"
+
+"""
+    由我执行的业务
+"""
+# 点击由我执行的任务
+curing_by_me_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(3)>ul>li:nth-child(3)"
+# 点击养护记录
+curing_by_me_cord_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > button:nth-child(1)"
+# # 点击返回
+curing_by_me_return_click=By.CSS_SELECTOR,".ant-btn"
+# # 点击详情
+curing_by_me_details_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > button:nth-child(2)"
+
+"""
+    由我审批的任务
+"""
+# 点击由我审批的任务
+curing_by_me_approval_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(3)>ul>li:nth-child(4)"
+# 点击详情
+curing_by_me_approval_details_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > button:nth-child(2)"
+# 点击审批
+curing_by_me_approval_approval_click=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(8) > button:nth-child(1)"
+# 输入审批意见
+curing_by_me_approval_device=By.CSS_SELECTOR,"#auditorResult"
+# 点击通过
+curing_by_me_approval_through=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+
+"""
+    维修记录管理
+"""
+
+# 点击维修记录
+maintenance_record_manage_click=By.CSS_SELECTOR,"#root>section>aside>div>div>ul>li>ul>li:nth-child(4)>ul>li:nth-child(5)"
+# 点击新增
+maintenance_record_manage_insert_click=By.CSS_SELECTOR,"#root>section>section>main>div>div:nth-child(2)>div:nth-child(1)>div:nth-child(2)>button:nth-child(1)"
+# 点击养护名称icon
+maintenance_record_manage_insert_name_icon=By.CSS_SELECTOR,"div.ant-row:nth-child(2) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择养护名称radio
+maintenance_record_manage_insert_name_radio=By.CSS_SELECTOR, "tr.ant-table-row:nth-child(1) > td:nth-child(1) > span:nth-child(1) > label:nth-child(1) > span:nth-child(1) > input"
+# 点击确定
+maintenance_record_manage_insert_name_sure = By.CSS_SELECTOR, ".ant-modal-footer > div:nth-child(1) > button:nth-child(2)"
+# 点击损坏类型
+maintenance_record_manage_insert_back_type_click=By.CSS_SELECTOR,"#root>section>section>main>div>section>main>form>div:nth-child(3)>div:nth-child(2)>div>span>div>div"
+# 选择损坏类型
+maintenance_record_manage_insert_back_type_select=By.CSS_SELECTOR,"li.ant-select-dropdown-menu-item:nth-child(1)"
+# 输入损坏原因概述
+maintenance_record_manage_insert_back_content=By.CSS_SELECTOR,"#reason"
+# 点击维修结果
+maintenance_record_manage_insert_service_result_click=By.CSS_SELECTOR,"#fixResult > div:nth-child(1)"
+# 选择维修结果
+maintenance_record_manage_insert_service_result_select=By.CSS_SELECTOR,".ant-select-dropdown-menu-item-active"
+# 点击维修时间
+maintenance_record_manage_insert_service_time_click=By.CSS_SELECTOR,".ant-calendar-picker-input"
+# 选择维修时间
+maintenance_record_manage_insert_service_time_select=By.CSS_SELECTOR,".ant-calendar-today-btn"
+# 点击是否选择维修厂家
+maintenance_record_manage_insert_is_shop=By.CSS_SELECTOR,"label.ant-radio-wrapper:nth-child(1) > span:nth-child(1) > input:nth-child(1)"
+# 点击维修厂家
+maintenance_record_manage_insert_service_shop_click=By.CSS_SELECTOR,"#companyId > div:nth-child(1)"
+# 选择维修厂家
+maintenance_record_manage_insert_service_shop_select=By.CSS_SELECTOR,"body>div:last-child>div>div>div>ul>li:nth-child(1)"
+# 点击维修人icon
+maintenance_record_manage_insert_service_person_icon=By.CSS_SELECTOR,"div.ant-row:nth-child(9) > div:nth-child(2) > div:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(1) > span:nth-child(2) > i:nth-child(1)"
+# 选择维修人raido
+maintenance_record_manage_insert_service_person_radio=By.CSS_SELECTOR, "body>div:last-child>div>div:nth-child(2)>div>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>div>div>div>div>div>table>tbody>tr:first-child>td:first-child>span>label>span>input"
+# 点击确定
+maintenance_record_manage_insert_service_sure = By.CSS_SELECTOR, "body>div:last-child>div>div:nth-child(2)>div>div:nth-child(2)>div:last-child>div>button:nth-child(2)"
+# 输入维修费用
+maintenance_record_manage_insert_service_price=By.CSS_SELECTOR,"#cost"
+# 输入维修方法描述
+maintenance_record_manage_insert_service_desc=By.CSS_SELECTOR,"#fixMethod"
+# 输入备注
+maintenance_record_manage_insert_service_remark=By.CSS_SELECTOR,"#remarks"
+# 点击保存
+maintenance_record_manage_insert_sure=By.CSS_SELECTOR,"button.ant-btn:nth-child(2)"
+# 点击编辑
+maintenance_record_manage_edit_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(10) > div:nth-child(1) > button:nth-child(2)"
+# 点击查看
+maintenance_record_manage_watch_button=By.CSS_SELECTOR,"tr.ant-table-row:nth-child(1) > td:nth-child(10) > div:nth-child(1) > button:nth-child(1)"
 ######################################################################################################################################
 """
     养护历史管理
